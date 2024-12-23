@@ -1,0 +1,93 @@
+.container {
+  background-color: FEFEFE;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partners {
+  display: flex;
+  gap: 0px 80px ;
+  overflow-x: auto;
+  justify-content: space-between;
+  width: 100%;
+  padding-top:40px;
+}
+
+.partners > div {
+  flex-shrink: 0;
+}
+.partners::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.cardContainer {
+background-color: var(--primary-color);
+}
+
+.gradientText {
+  background: linear-gradient(to bottom right, #00ffaa , #0D4DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.backgroundDiv{
+  /* background-color: var(--highlight-color); */
+  background-color: #488dd6;
+  height: 220px;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(-2deg);
+  z-index: 1;
+  top: 60px;
+}
+.imageDiv{
+  background-image: url('/assets/icons/DigitalSolutionWave.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+.backgroundDiv{
+  height:225px;
+  top:40px;
+  transform: rotate(-3deg);
+}
+.partners{
+  width: 100%;
+}
+}
+@media (max-width: 768px) {
+  .backgroundDiv{
+    height:225px;
+    top:40px;
+    transform: rotate(-3deg);
+  }
+  .partners{
+    width: 100%;
+  }
+  }
+  @media (max-width: 1024px) {
+    .backgroundDiv{
+      height:225px;
+      top:40px;
+    }
+  }  
+@media (min-width:1536px){
+.backgroundDiv{
+  top:50px;
+  height: 280px;
+}
+
+}

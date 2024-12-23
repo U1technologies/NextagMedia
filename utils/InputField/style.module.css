@@ -1,0 +1,25 @@
+.input {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+    width: 100%;
+}
+.input:focus {
+    outline: none;
+    border-bottom: 1px solid #121212;
+}
+
+.textAreaInput{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.textAreaInput:focus {
+    outline: none;
+    border: 1px solid #121212;
+}
+  

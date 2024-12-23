@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+html {
+  font-size: 15px;
+}
+ 
+:root {
+  --footer-color: #F6FAFF;
+  --navbar-color: #FEFEFE;
+  --primary-color: #FEFEFE;
+  --secondary-color: #F5F5F5;
+  --background-color: #FEFEFE;
+  --primary-text-color: #333333;
+  --secondary-text-color: #6e6e6e;
+  --highlight-color: #ffc700;
+  --section-width: 85%;
+  --section-width-mobile: 90%;
+  --font-primary: 'Roboto', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --title-padding: 0.5rem 0;
+  --paragraph-padding: 0.5rem 0;
+  --paragraph-line-height: 1.6;
+  --font-size-h1: 3.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.1rem;
+  --font-size-h5: 15px;
+  --font-size-h6: 1rem;
+  --font-size-paragraph: 1rem;
+  --font-size-title: 2rem;
+  --font-size-label: 14px;  
+}
+@media (min-width: 1440px) {
+  :root {
+    --font-size-title: clamp(2rem,10vw, 2.5rem);
+    --font-size-h1: clamp(3.5rem, 10vw, 4.5rem);
+    --font-size-h2: clamp(1.75rem, 30vw, 3rem);
+    --font-size-h3: clamp(1.2rem, 10vw, 2rem);
+    --font-size-h4: clamp(1.1rem, 10vw, 1.38rem);
+    --font-size-h5: clamp(1rem, 9vw, 1.2rem);
+    --font-size-paragraph: clamp(1.15rem, 10vw, 1.28rem);
+  }
+}
+ 
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+ 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+ 
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+ 
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ 
+.ql-editor::-webkit-scrollbar {
+  width: 12px;
+}
+ 
+.ql-editor::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+.ql-editor::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+ 
+.ql-editor::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ 
+.customScroll::-webkit-scrollbar {
+  width: 12px;
+}
+ 
+.customScroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+.customScroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+ 
+.customScroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ 
+.rti--container {
+   color: #121212;
+   --rti-main:none !important;
+   height: 30px !important;
+   border:none !important;
+   padding: 0 !important;
+}
+ 
+.rti--input{
+  outline: none !important;
+}
+ 
+.ql-toolbar{
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.221) !important;
+  
+}
+.ql-container {
+  font-size: 18px !important;
+  color: var(--primary-text-color) !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  height:140px !important;
+  border: none !important;
+}
+
+.blogQuill > .ql-container {
+  font-size: 18px !important;
+  color: var(--primary-text-color) !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  height:60vh !important;
+  border: none !important;
+}
+ 
+ 
+.ql-editor{
+  padding: 15px 0px !important;
+}
+ /*buttons*/
+.primary-button {
+  color: var(--primary-text-color);
+  font-size: var(--font-size-paragraph);
+  background-color: var(--highlight-color);
+  border-radius: 6px;
+  padding: 9px 20px;
+  border: none;
+  cursor: pointer;
+}
+.primary-button-outline {
+  color: var(--highlight-color);
+  font-size: var(--font-size-paragraph);
+  border: 1.5px solid var(--highlight-color);
+  border-radius: 6px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+.primary-button-outline-disabled {
+  color: #6e6e6e93;
+  font-size: var(--font-size-paragraph);
+  background-color: transparent;
+  border: 1.5px solid #6e6e6e53;
+  border-radius: 6px;
+  padding: 8px 18px;
+  cursor: pointer;
+  /* font-weight: 500 */
+}
+/* Default styles for heading and paragraph tags using variables */
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+ 
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+}
+ 
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+ 
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+}
+ 
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+}
+ 
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  line-height: 22px;
+}
+ 
+p{
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--paragraph-line-height)
+}
+ 
+button Link{
+  font-size: var(--font-size-paragraph);
+}
+ 
+label{
+  font-size: var(--font-size-label);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px; 
+}
+
+ul li {
+  margin-bottom: 10px; /* Adjust the value for more or less space */
+  font-size: var(--font-size-paragraph);
+}
+ 
+section{
+  width: var(--section-width);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 0px 60px;
+}
+ 
+.section-width{
+  width: var(--section-width);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 0px 10px;
+}
+ 
+@media screen and (max-width: 1024px) {
+  section{
+    width: var(--section-width-mobile);
+    padding: 40px 0px 40px;
+  }
+ 
+  .section-width{
+    width: var(--section-width-mobile);
+    padding: 40px 0px 10px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  section{
+    max-width: 1500px;
+    padding: 40px 0px 40px;
+  }
+ 
+  .section-width{
+    max-width: 1500px;
+    padding: 40px 0px 10px;
+  }
+}
+ 

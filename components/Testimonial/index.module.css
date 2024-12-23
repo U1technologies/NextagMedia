@@ -1,0 +1,8 @@
+.customScroll {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.customScroll::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,32 @@
+.menu {
+    width: 330px;
+    position: absolute;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    top: 0;
+    right: 0;
+}
+  
+.navLink {
+    border-bottom: 1px solid #303035;
+    box-shadow: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 260px;
+    margin-left: 20px;
+}
+
+.menu div::-webkit-scrollbar {
+    display: none;
+}
+
+.menu div li {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}

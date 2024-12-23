@@ -1,0 +1,27 @@
+.footer{
+    color:var(--secondary-text-color);
+    border-top: 1px solid #D9DBE9;
+}
+
+.spanHeading{
+    color: var(--primary-text-color);
+    margin-bottom: 16px;
+}
+.partnersHeading{
+    color: var(--primary-text-color);
+}
+.RightSlideButton{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    background: #F8F9FA;
+    margin-left: 15px;
+    transform: rotate(180deg);
+}
+.RightSlideButton:hover{
+    opacity: 0.8;
+    border: 1px solid grey;
+    background-color: #f0ecec;
+}

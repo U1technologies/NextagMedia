@@ -1,0 +1,105 @@
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+  border-radius: 10px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.leftPane {
+  /* flex: 1; */
+  max-width: 300px;
+  padding-right: 20px;
+}
+
+.contacts {
+  margin-top: 20px;
+}
+
+.rightPane {
+  flex: 2;
+  max-width: 800px;
+  border-radius: 10px;
+  color: #121212;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  padding: 30px;
+  font-weight: 600;
+}
+
+.textAreaInput {
+  resize: none;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  margin-left: -83px;
+  width: auto;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.flag div {
+  width: 120px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 20px;
+  padding-left: 0;
+  margin-right: 5px;
+}
+
+.flag div select {
+  width: 20px;
+  height: 35px;
+  color: rgb(49, 47, 47);
+  background: var(--secondary-color);
+}
+
+.flag div select:focus {
+  outline: none;
+}
+
+.flag input {
+  background-color: transparent;
+  border-bottom: 1px solid #d1d5db;
+  width: 500px;
+  height: 35px;
+  padding-bottom: 4px;
+}
+
+.flag input:focus {
+  outline: none;
+}
+
+/* media screen for mobile view */
+@media screen and (max-width: 768px){
+  .leftPane {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .form {
+    padding: 20px 15px;
+  }
+
+  .flag input {
+    width: 100%; /* Adjust the phone input field to fit the screen */
+  }
+}
+
+@media(min-width:1536px){
+  .rightPane {
+    max-width: 60%;
+  }
+
+  .leftPane {
+    max-width: 40%;
+  }
+}

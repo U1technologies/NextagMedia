@@ -1,0 +1,19 @@
+/* .gradientText {
+    background: linear-gradient(to bottom right, #00ffaa , #0D4DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.description{
+    color: var(--secondary-text-color);
+}
+.wrapper:focus {
+        outline: none; 
+        -webkit-tap-highlight-color: transparent; 
+      }
+
+@media (max-width:768px) {
+  .description{
+    font-size: 1.3rem;
+  }
+}
+       */

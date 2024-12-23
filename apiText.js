@@ -1,0 +1,1 @@
+export const ROUTE_SCHEDULE_MEETING = '/schedule-meeting'

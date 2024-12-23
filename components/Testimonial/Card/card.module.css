@@ -1,0 +1,33 @@
+.story {
+  -webkit-box-orient: vertical;
+  overflow-y: auto;
+  max-height: 130px;
+}
+.story::-webkit-scrollbar {
+  display: none;
+}
+.story:hover::-webkit-scrollbar {
+  width: 2px;
+  display: block;
+}
+.story::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+.story::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .story {
+    max-height: 150px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .story {
+    max-height: 180px;
+  }
+}

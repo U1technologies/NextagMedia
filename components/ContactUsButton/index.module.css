@@ -1,0 +1,9 @@
+.contactButton{
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 9px 20px;
+    height: fit-content;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+.navbar {
+  height: 4.5vw;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 100;
+  background-color: var(--navbar-color);  
+  margin: auto;
+  border-bottom: solid 1px #3d3d3d25;
+  justify-content: center; /* Ensures the inner div is centered */
+}
+
+.innerDiv {
+  width: var(--section-width);
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  width: 90%;
+}
+
+.contentDiv {
+  width: fit-content;
+  /* display: flex; */
+  justify-content: center; 
+  /* margin-right: 40px; */
+}
+
+.contactButton {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 9px 20px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .innerDiv {
+    width: var(--section-width-mobile);
+  }
+  .navbar {
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .innerDiv {
+    width: var(--section-width);
+    max-width: 1500px;
+  }
+}
