@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionHeading from '../SectionHeading';
 import Card from './Card/Card';
 import Styles from './index.module.css';
 
@@ -7,19 +6,19 @@ const Testimonial = () => {
   const H2_OUR_CLIENT = "Customer Stories";
   const details = [
     {
-      profileImage: "/assets/images/home-page/anupam.jpeg",
+      profileImage: "/assets/Images/home-page/anupam.jpeg",
       name: "Sarah Johnson",
       designation: "CEO, TechStart Inc.",
       description: "Their digital marketing expertise has been instrumental in our growth. We've seen a 200% increase in qualified leads since partnering with them.",
     },
     {
-      profileImage: "/assets/images/home-page/anupam.jpeg",
+      profileImage: "/assets/Images/home-page/anupam.jpeg",
       name: "Michael Chen",
       designation: "Marketing Director, GrowthMax",
       description: "The ROI we've seen from their PPC campaigns has been remarkable. They truly understand our market and deliver results consistently.",
     },
     {
-      profileImage: "/assets/images/home-page/anupam.jpeg",
+      profileImage: "/assets/Images/home-page/anupam.jpeg",
       name: "Emily Rodriguez",
       designation: "Founder, Digital Edge",
       description: "Their SEO strategies have helped us achieve top rankings for our key terms. Our organic traffic has increased by 150% in just 6 months.",

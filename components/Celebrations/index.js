@@ -81,15 +81,15 @@ import Styles from "./index.module.css";
 const Celebrations = () => {
   const TITLE = 'Our Celebrations';
   const eventImages = [
-    { image: '/assets/images/home-page/image1.jpg', alt: 'Event 1', caption: 'Lunch Party' },
-    { image: '/assets/images/home-page/image10.jpg', alt: 'Event 2', caption: 'Team Party' },
-    { image: '/assets/images/home-page/image2.jpg', alt: 'Event 3', caption: 'Festival Celebration' },
-    { image: '/assets/images/home-page/image4.jpg', alt: 'Event 4', caption: 'Workshop Event' },
-    { image: '/assets/images/home-page/image5.jpg', alt: 'Event 5', caption: 'Cultural Night' },
-    { image: '/assets/images/home-page/image6.jpg', alt: 'Event 6', caption: 'Celebration Day' },
-    { image: '/assets/images/home-page/image7.jpg', alt: 'Event 6', caption: 'Celebration Day' },
-    { image: '/assets/images/home-page/image8.jpg', alt: 'Event 6', caption: 'Celebration Day' },
-    { image: '/assets/images/home-page/image9.jpg', alt: 'Event 6', caption: 'Christmas Celebration' },
+    { image: '/assets/Images/home-page/image1.jpg', alt: 'Event 1', caption: 'Lunch Party' },
+    { image: '/assets/Images/home-page/image10.jpg', alt: 'Event 2', caption: 'Team Party' },
+    { image: '/assets/Images/home-page/image2.jpg', alt: 'Event 3', caption: 'Festival Celebration' },
+    { image: '/assets/Images/home-page/image4.jpg', alt: 'Event 4', caption: 'Workshop Event' },
+    { image: '/assets/Images/home-page/image5.jpg', alt: 'Event 5', caption: 'Cultural Night' },
+    { image: '/assets/Images/home-page/image6.jpg', alt: 'Event 6', caption: 'Celebration Day' },
+    { image: '/assets/Images/home-page/image7.jpg', alt: 'Event 6', caption: 'Celebration Day' },
+    { image: '/assets/Images/home-page/image8.jpg', alt: 'Event 6', caption: 'Celebration Day' },
+    { image: '/assets/Images/home-page/image9.jpg', alt: 'Event 6', caption: 'Christmas Celebration' },
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -133,20 +133,6 @@ const Celebrations = () => {
             ))}
           </div>
         </div>
-
-        {/* Page Navigation */}
-        {/* <div className="flex justify-center mt-4">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => handlePageClick(index)}
-              className={`mx-1 h-[10px] w-[10px] rounded-full ${index === currentPage
-                ? 'bg-[#ffc700]'
-                : 'bg-gray-300'}`}
-              aria-label={`Page ${index + 1}`}
-            ></button>
-          ))}
-        </div> */}
       </section>
     </div>
   );

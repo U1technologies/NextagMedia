@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import SectionHeading from '../SectionHeading'
-
 const OurServices = () => {
   return (
     <div className="bg-secondary pb-12">
@@ -20,7 +18,7 @@ const OurServices = () => {
         {/* Left Section: Image */}
         <div className="mb-8 flex w-full justify-center md:mb-0 md:w-1/2 md:justify-start">
           <Image
-            src="/assets/images/home-page/main-service.svg"
+            src="/assets/Images/home-page/main-service.svg"
             width={400}
             height={400}
             alt="Service"
@@ -75,37 +73,37 @@ const OurServices = () => {
               title: 'Paid Marketing',
               description:
                 'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
-              imgSrc: '/assets/images/home-page/paid-marketing.svg',
+              imgSrc: '/assets/Images/home-page/paid-marketing.svg',
             },
             {
               title: 'Social Media Management',
               description:
                 "Boost your brand's visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.",
-              imgSrc: '/assets/images/home-page/social-media.svg',
+              imgSrc: '/assets/Images/home-page/social-media.svg',
             },
             {
               title: 'Web Development',
               description:
                 'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
-              imgSrc: '/assets/images/home-page/website-dev.svg',
+              imgSrc: '/assets/Images/home-page/website-dev.svg',
             },
             {
               title: 'SEO',
               description:
                 'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
-              imgSrc: '/assets/images/home-page/SEO-hp.svg',
+              imgSrc: '/assets/Images/home-page/SEO-hp.svg',
             },
             {
               title: 'Lead Generation',
               description:
                 'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
-              imgSrc: '/assets/images/home-page/leads-gen.svg',
+              imgSrc: '/assets/Images/home-page/leads-gen.svg',
             },
             {
               title: 'PPC Management',
               description:
                 'Optimize your advertising spend with Nextagmedia’s PPC management. Our campaigns focus on driving high-quality traffic, ensuring cost-effective performance, and achieving better ROI.',
-              imgSrc: '/assets/images/home-page/ppc.jpg',
+              imgSrc: '/assets/Images/home-page/ppc.jpg',
             },
           ].map(({ title, description, imgSrc }, idx) => (
             <div
@@ -135,7 +133,7 @@ const OurServices = () => {
                 <button className="flex w-fit items-center rounded-full border border-highlight bg-primary px-3 py-2 text-lg text-text_color_primary">
                   <p className='text-lg'>View More</p>
                   <Image
-                    src="/assets/images/home-page/right-arrow.svg"
+                    src="/assets/Images/home-page/right-arrow.svg"
                     alt="Arrow Icon"
                     width={16}
                     height={16}

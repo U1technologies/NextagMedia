@@ -10,7 +10,7 @@ const AboutCompany = () => {
           {/* Image Section */}
           <div className="flex justify-center items-center w-full lg:w-[50%] order-first md:order-none">
             <Image
-              src="/assets/images/home-page/About us.svg"
+              src="/assets/Images/home-page/About us.svg"
               alt="About Us Image"
               height={50}
               width={50}
@@ -41,7 +41,7 @@ const AboutCompany = () => {
             <div className="flex flex-row items-center space-y-0 space-x-4 pt-4 max-md:mx-auto">
               {/* Owner Image */}
               <Image
-                src="/assets/images/home-page/anupam.jpeg"
+                src="/assets/Images/home-page/anupam.jpeg"
                 alt="Owner Image"
                 width={20}
                 height={20}
