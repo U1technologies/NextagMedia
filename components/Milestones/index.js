@@ -38,7 +38,7 @@ const milestonesData = {
 };
 
 export default function TimelineSection() {
-  const [activeYear, setActiveYear] = useState(2023); // Default active year
+  const [activeYear, setActiveYear] = useState(2023); 
 
   return (
     <section className="py-16 relative">

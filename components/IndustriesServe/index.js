@@ -2,18 +2,18 @@ import Image from "next/image";
 import React from "react";
 
 const industries = [
-  { title: "E-commerce", icon: "/assets/images/home-page/ecommerce.svg" },
-  { title: "Retail", icon: "/assets/images/home-page/retail.svg" },
-  { title: "Healthcare", icon: "/assets/images/home-page/health.svg" },
-  { title: "Finance", icon: "/assets/images/home-page/finance.svg" },
-  { title: "Technology", icon: "/assets/images/home-page/web.svg" },
-  { title: "Food", icon: "/assets/images/home-page/food.svg" },
-  { title: "Travel", icon: "/assets/images/home-page/travel.svg" },
-  { title: "Real Estate", icon: "/assets/images/home-page/real-estate.svg" },
-  { title: "Education", icon: "/assets/images/home-page/education.svg" },
-  { title: "Fashion", icon: "/assets/images/home-page/fashion.svg" },
-  { title: "Entertainment", icon: "/assets/images/home-page/entertainment.svg" },
-  { title: "Electronics", icon: "/assets/images/home-page/electronics.svg" },
+  { title: "E-commerce", icon: "/assets/Images/home-page/ecommerce.svg" },
+  { title: "Retail", icon: "/assets/Images/home-page/retail.svg" },
+  { title: "Healthcare", icon: "/assets/Images/home-page/health.svg" },
+  { title: "Finance", icon: "/assets/Images/home-page/finance.svg" },
+  { title: "Technology", icon: "/assets/Images/home-page/web.svg" },
+  { title: "Food", icon: "/assets/Images/home-page/food.svg" },
+  { title: "Travel", icon: "/assets/Images/home-page/travel.svg" },
+  { title: "Real Estate", icon: "/assets/Images/home-page/real-estate.svg" },
+  { title: "Education", icon: "/assets/Images/home-page/education.svg" },
+  { title: "Fashion", icon: "/assets/Images/home-page/fashion.svg" },
+  { title: "Entertainment", icon: "/assets/Images/home-page/entertainment.svg" },
+  { title: "Electronics", icon: "/assets/Images/home-page/electronics.svg" },
 ];
 
 const IndustriesWeServe = () => {

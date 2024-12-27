@@ -1,9 +1,5 @@
 import React from "react";
 import Image from 'next/image';
-import Link from "next/link";
-import linkedinIcon from '@/public/assets/Images/home-page/linkedin-icon.svg'
-import instaIcon from '@/public/assets/Images/home-page/instagram-icon.svg'
-import facebookIcon from '@/public/assets/Images/home-page/facebook-icon.svg'
 
 const AboutUsSection = () => {
   return (
@@ -26,7 +22,7 @@ const AboutUsSection = () => {
           {/* Right Section */}
           <div className="flex justify-center items-center w-full lg:w-[50%]">
             <Image
-              src="/assets/images/home-page/team-nextag.jpeg"
+              src="/assets/Images/home-page/team-nextag.jpeg"
               alt="Hero Image"
               height={50}
               width={50}

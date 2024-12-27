@@ -15,7 +15,6 @@ const AboutPage = () => {
       <AboutCEO />
       <TimelineSection />
       <Celebrations />
-      {/* <IndustriesWeServe /> */}
     </div>
   );
 };

@@ -127,7 +127,7 @@ export const SCHEDULE_MEETING_JSON = {
 export const PERFORMANCE_MARKETING_PAGE = {
   title: 'Performance Marketing',
   description: 'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
-  image: '/assets/images/home-page/paid-marketing.svg',
+  image: '/assets/Images/home-page/paid-marketing.svg',
   processImage: "/assets/Images/home-page/paid-markett.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Unlock the full potential of your business with tailored performance marketing strategies designed to drive traffic, boost conversions, and maximize ROI across all platforms.',
@@ -135,27 +135,27 @@ export const PERFORMANCE_MARKETING_PAGE = {
     {
       title: "Targeted Ad Campaigns",
       description: "Precisely reach your ideal audience based on demographics, interests, and behavior to maximize conversions.",
-      image: "/assets/images/home-page/ad-campp.png",
+      image: "/assets/Images/home-page/ad-campp.png",
     },
     {
       title: "Multi-Platform Advertising",
       description: "Run impactful campaigns on Google Ads, Facebook, Instagram, LinkedIn, and other platforms to expand your reach.",
-      image: "/assets/images/home-page/cross-platform.png",
+      image: "/assets/Images/home-page/cross-platform.png",
     },
     {
       title: "Data-Driven Optimization",
       description: "Leverage real-time analytics and insights to continuously refine strategies for better ROI and reduced ad spend.",
-      image: "/assets/images/home-page/data-driven.svg",
+      image: "/assets/Images/home-page/data-driven.svg",
     },
     {
       title: "Retargeting Campaigns",
       description: "Re-engage potential customers who showed interest but didn’t convert, ensuring higher conversion rates.",
-      image: "/assets/images/home-page/target-1.png",
+      image: "/assets/Images/home-page/target-1.png",
     },
     {
       title: "Conversion Tracking & Transparent Reporting",
       description: "Receive detailed performance reports on leads, sales, and ROI to measure success and ensure accountability.",
-      image: "/assets/images/home-page/recovery.png",
+      image: "/assets/Images/home-page/recovery.png",
     },
     
   ], 
@@ -190,7 +190,7 @@ export const PERFORMANCE_MARKETING_PAGE = {
 export const SOCIAL_MEDIA_PAGE = {
   title: 'Social Media Management',
   description: 'Boost your brand’s visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.',
-  image: '/assets/images/home-page/social-media.svg',
+  image: '/assets/Images/home-page/social-media.svg',
   processImage: "/assets/Images/home-page/social-media-process.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Empower your brand with dynamic social media strategies that drive engagement, build a loyal audience, and amplify your online presence across platforms.',
@@ -198,22 +198,22 @@ export const SOCIAL_MEDIA_PAGE = {
     {
       title: "Platform Strategy Development",
       description: "Develop tailored strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn to increase brand visibility.",
-      image: "/assets/images/home-page/Platform-Strategy.png",
+      image: "/assets/Images/home-page/Platform-Strategy.png",
     },
     {
       title: "Content Creation & Scheduling",
       description: "Create engaging content and schedule posts to maintain consistent brand presence and engage with your audience.",
-      image: "/assets/images/home-page/content-creator.png",
+      image: "/assets/Images/home-page/content-creator.png",
     },
     {
       title: "Community Engagement",
       description: "Interact with followers and respond to inquiries to build a loyal online community that drives brand advocacy.",
-      image: "/assets/images/home-page/Community-Engagement.png",
+      image: "/assets/Images/home-page/Community-Engagement.png",
     },
     {
       title: "Performance Analytics & Reporting",
       description: "Analyze key metrics like engagement, reach, and growth to optimize content strategy and improve performance.",
-      image: "/assets/images/home-page/Performance-Analytics.png",
+      image: "/assets/Images/home-page/Performance-Analytics.png",
     },
   ],
   faqSection: {
@@ -251,7 +251,7 @@ export const SOCIAL_MEDIA_PAGE = {
 export const WEB_DEVELOPMENT_PAGE = {
   title: 'Web Development',
   description: 'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
-  image: '/assets/images/home-page/website-dev.svg',
+  image: '/assets/Images/home-page/website-dev.svg',
   processImage: "/assets/Images/home-page/web-developmentt.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Craft seamless, responsive, and high-performance websites tailored to your business needs, designed to captivate your audience and achieve your goals.',
@@ -317,7 +317,7 @@ export const WEB_DEVELOPMENT_PAGE = {
 export const SEO_PAGE = {
   title: 'SEO',
   description: 'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
-  image: '/assets/images/home-page/SEO-hp.svg',
+  image: '/assets/Images/home-page/SEO-hp.svg',
   processImage: "/assets/Images/home-page/SEO-process.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Boost your online visibility with advanced SEO techniques that drive organic traffic, improve rankings, and ensure your brand stays ahead of the competition.',
@@ -378,7 +378,7 @@ export const SEO_PAGE = {
 export const LEAD_GENERATION_PAGE = {
   title: 'Lead Generation',
   description: 'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
-  image: '/assets/images/home-page/leads-gen.svg',
+  image: '/assets/Images/home-page/leads-gen.svg',
   processImage: "/assets/Images/home-page/leads-generate.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Accelerate business growth with targeted lead generation strategies that deliver qualified prospects straight to your sales pipeline.',
@@ -440,7 +440,7 @@ export const LEAD_GENERATION_PAGE = {
 export const PERSONAL_BRANDING_PAGE = {
   title: 'Personal Branding',
   description: 'Build a strong, authentic personal brand that sets you apart in the digital landscape. Nextagmedia helps you showcase your expertise, amplify your voice, and create a compelling online presence to inspire trust and attract opportunities.',
-  image: '/assets/images/home-page/personal-branding.svg',
+  image: '/assets/Images/home-page/personal-branding.svg',
   processImage: "/assets/Images/home-page/personal-brand.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Build a compelling personal brand that resonates with your audience, establishes your authority, and drives opportunities across your industry.',
@@ -506,7 +506,7 @@ export const PERSONAL_BRANDING_PAGE = {
 export const UGC_PAGE = {
   title: 'UGC Content',
   description: 'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
-  image: '/assets/images/home-page/About us.svg',
+  image: '/assets/Images/home-page/About us.svg',
   processImage: "/assets/Images/home-page/UGC-process.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Leverage authentic user-generated content to strengthen trust, increase engagement, and create a lasting impact on your target audience.',

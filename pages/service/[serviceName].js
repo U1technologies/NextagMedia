@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { 
-  LEAD_GENERATION_PAGE, 
-  PAID_MARKETING_PAGE, 
+  LEAD_GENERATION_PAGE,  
   PERFORMANCE_MARKETING_PAGE, 
   PERSONAL_BRANDING_PAGE, 
   PPC_PAGE, 
@@ -16,7 +15,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useTheme, useMediaQuery } from '@mui/material';
 import FirstComponent from '@/components/FirstComponent';
-import SubscriptionComponent from '@/components/SubscriptionComponent';
 import Features from '@/components/SecondComponent';
 import ServiceProcess from '@/components/ThirdComponent';
 import FaqComponent from '@/components/FAQs';
