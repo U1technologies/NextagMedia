@@ -27,7 +27,7 @@ const AboutCompany = () => {
             Meet the team responsible for today&apos;s quickest growing business.
             </p>
             <div className="flex justify-center md:justify-start pb-4 max-md:mx-auto">
-              <Link href="/contact">
+              <Link href="/about">
                 <button className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-2">
                   MORE ABOUT US
                 </button>
@@ -43,9 +43,9 @@ const AboutCompany = () => {
               <Image
                 src="/assets/Images/home-page/anupam.jpeg"
                 alt="Owner Image"
-                width={20}
-                height={20}
-                className="w-20 h-20 object-fill"
+                width={80}
+                height={80}
+                className="object-cover"
               />
               {/* Owner Info */}
               <div>

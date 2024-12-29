@@ -70,45 +70,51 @@ const OurServices = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: 'Paid Marketing',
+              title: 'Performance Marketing',
               description:
                 'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
               imgSrc: '/assets/Images/home-page/paid-marketing.svg',
+              link: '/service/performance-marketing',
             },
             {
               title: 'Social Media Management',
               description:
                 "Boost your brand's visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.",
               imgSrc: '/assets/Images/home-page/social-media.svg',
+              link: '/service/social-media-management',
             },
             {
               title: 'Web Development',
               description:
                 'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
               imgSrc: '/assets/Images/home-page/website-dev.svg',
+              link: '/service/web-development',
             },
             {
               title: 'SEO',
               description:
                 'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
               imgSrc: '/assets/Images/home-page/SEO-hp.svg',
+              link: '/service/seo',
             },
             {
               title: 'Lead Generation',
               description:
                 'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
               imgSrc: '/assets/Images/home-page/leads-gen.svg',
+              link: '/service/lead-generation',
             },
             {
-              title: 'PPC Management',
+              title: 'Personal Branding',
               description:
-                'Optimize your advertising spend with Nextagmedia’s PPC management. Our campaigns focus on driving high-quality traffic, ensuring cost-effective performance, and achieving better ROI.',
-              imgSrc: '/assets/Images/home-page/ppc.jpg',
+                'Build a strong, authentic personal brand that sets you apart in the digital landscape. Nextagmedia helps you showcase your expertise, amplify your voice, and create a compelling online presence to inspire trust and attract opportunities.',
+              imgSrc: '/assets/Images/home-page/personal-branding.svg',
+              link: '/service/personal-branding',
             },
-          ].map(({ title, description, imgSrc }, idx) => (
+          ].map(({ title, description, imgSrc, link}, idx) => (
             <div
               key={idx}
-              className="flex h-[440px] flex-col items-center rounded-tr-2xl rounded-bl-2xl bg-primary p-6 shadow-lg max-sm:h-[380px]"
+              className="flex h-[440px] flex-col items-center rounded-tl-[52px] rounded-br-[52px] border border-gray-200 bg-primary p-6 shadow-lg max-sm:h-[380px]"
             >
               {/* Image */}
               <div className="flex h-2/5 w-full justify-center">
@@ -130,8 +136,9 @@ const OurServices = () => {
               </p>
               {/* Button */}
               <div className="mt-auto flex w-full justify-center">
-                <button className="flex w-fit items-center rounded-full border border-highlight bg-primary px-3 py-2 text-lg text-text_color_primary">
-                  <p className='text-lg'>View More</p>
+                <Link href={link}>
+                  <button className="flex w-fit items-center rounded-full border border-highlight bg-primary px-2 py-1 text-lg text-text_color_primary">
+                    <p className=' mx-auto'>View More</p>
                   <Image
                     src="/assets/Images/home-page/right-arrow.svg"
                     alt="Arrow Icon"
@@ -141,6 +148,7 @@ const OurServices = () => {
                   />
                   {/* View More */}
                 </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -148,7 +156,7 @@ const OurServices = () => {
       </div>
       <div className="mt-12 text-center">
         <Link
-          href={''}
+          href={'/service/performance-marketing'}
           className="inline-block rounded-md bg-highlight px-8 py-3 text-text_color_primary"
         >
           EXPLORE ALL

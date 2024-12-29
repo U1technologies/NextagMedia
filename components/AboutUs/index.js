@@ -2,6 +2,14 @@ import React from "react";
 import Image from 'next/image';
 
 const AboutUsSection = () => {
+  // Function to handle the scroll to the ValuesSection
+  const scrollToValuesSection = () => {
+    const valuesSection = document.getElementById("values-section"); // Target the section with the id
+    if (valuesSection) {
+      valuesSection.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to that section
+    }
+  };
+
   return (
     <section>
       <div className="relative flex justify-center items-center">
@@ -16,7 +24,13 @@ const AboutUsSection = () => {
             <p className="text-lg lg:text-xl font-normal text-left text-text_color_secondary w-[90%]">
               At NextagMedia, our focus is on driving your success through exceptional digital design. We collaborate closely with you to bring your ideas to life, align with your vision, and create striking graphic and web designs that make your brand stand out.
             </p>
-            <span className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-3">KNOW MORE</span>
+            {/* Know More button with onClick handler */}
+            <span 
+              className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-3 cursor-pointer"
+              onClick={scrollToValuesSection}
+            >
+              KNOW MORE
+            </span>
           </div>
 
           {/* Right Section */}
@@ -24,9 +38,9 @@ const AboutUsSection = () => {
             <Image
               src="/assets/Images/home-page/team-nextag.jpeg"
               alt="Hero Image"
-              height={50}
-              width={50}
-              className="w-[100%] max-w-[600px] h-auto object-cover rounded-lg "
+              height={600}
+              width={600}
+              className="rounded-lg "
             />
           </div>
         </div>

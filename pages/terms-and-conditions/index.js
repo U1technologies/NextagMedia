@@ -25,7 +25,7 @@ const TermsAndConditions = () => {
             {/* Right Section */}
             <div className="flex justify-center items-center w-full lg:w-[50%]">
               <Image 
-                src="/assets/images/home-page/terms.svg" 
+                src="/assets/Images/home-page/terms.svg" 
                 alt="Hero Image"
                 height={50}
                 width={50}

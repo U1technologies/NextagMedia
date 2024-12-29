@@ -82,12 +82,12 @@ const Celebrations = () => {
   const TITLE = 'Our Celebrations';
   const eventImages = [
     { image: '/assets/Images/home-page/image1.jpg', alt: 'Event 1', caption: 'Lunch Party' },
-    { image: '/assets/Images/home-page/image10.jpg', alt: 'Event 2', caption: 'Team Party' },
-    { image: '/assets/Images/home-page/image2.jpg', alt: 'Event 3', caption: 'Festival Celebration' },
-    { image: '/assets/Images/home-page/image4.jpg', alt: 'Event 4', caption: 'Workshop Event' },
-    { image: '/assets/Images/home-page/image5.jpg', alt: 'Event 5', caption: 'Cultural Night' },
-    { image: '/assets/Images/home-page/image6.jpg', alt: 'Event 6', caption: 'Celebration Day' },
-    { image: '/assets/Images/home-page/image7.jpg', alt: 'Event 6', caption: 'Celebration Day' },
+    { image: '/assets/Images/home-page/image10.jpg', alt: 'Event 2', caption: 'Speaker Session' },
+    { image: '/assets/Images/home-page/image2.jpg', alt: 'Event 3', caption: 'Diwali Gifts' },
+    { image: '/assets/Images/home-page/image4.jpg', alt: 'Event 4', caption: 'Holi Celebration' },
+    { image: '/assets/Images/home-page/image5.jpg', alt: 'Event 5', caption: 'Lunch Party' },
+    { image: '/assets/Images/home-page/image6.jpg', alt: 'Event 6', caption: 'Formal Discussion' },
+    { image: '/assets/Images/home-page/image7.jpg', alt: 'Event 6', caption: 'Affiliate World Summit' },
     { image: '/assets/Images/home-page/image8.jpg', alt: 'Event 6', caption: 'Celebration Day' },
     { image: '/assets/Images/home-page/image9.jpg', alt: 'Event 6', caption: 'Christmas Celebration' },
   ];

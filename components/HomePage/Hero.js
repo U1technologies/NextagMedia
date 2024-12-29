@@ -18,11 +18,11 @@ const Hero = () => {
                     </p>
                     <div className="flex justify-start">
                         <Link href="/contact">
-                            <button className="primary-button py-3 px-6 rounded-lg hover:bg-highlight hover:text-white mr-6">
-                                Contact Us
+                        <button className="bg-highlight py-2 px-6 rounded-md border-2 border-transparent hover:border-highlight hover:bg-primary hover:text-highlight mr-6">
+                        Contact Us
                             </button>
-                            <Link href="/service">
-                            <button className="primary-button-outline py-3 px-6 rounded-lg hover:bg-highlight hover:text-white">
+                            <Link href="/service/performance-marketing">
+                            <button className="primary-button-outline py-3 px-6 hover:bg-highlight hover:text-text_color_primary">
                                 Explore Services
                             </button>
                         </Link>
