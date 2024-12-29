@@ -16,9 +16,9 @@ const AboutCEO = () => {
           <Image
             src="/assets/Images/home-page/anup.jpeg"
             alt="CEO Image"
-            height={50}
-            width={50}
-            className="w-[480px] lg:w-[380px] h-auto object-cover rounded-lg"
+            height={380}
+            width={380}
+            className="rounded-lg"
           />
         </div>
         <div className="w-[90%] lg:w-[60%] flex flex-col items-start mt-12 lg:mt-0">
@@ -51,7 +51,7 @@ const AboutCEO = () => {
           {/* Social Links */}
           <div className="mt-4 flex space-x-2">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/anupampk/"
               target="_blank"
               rel="noopener noreferrer"
             >

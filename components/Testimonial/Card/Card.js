@@ -9,9 +9,9 @@ const Card = ({ description }) => {
       
       {/* Testimonial Description */}
       <p className={`text-text_color_secondary text-base mb-12 leading-relaxed ${Styles.story}`}>
-        <h3 className=" text-highlight">“</h3> 
+        <h3 className="text-highlight">“</h3> 
         <p className='text-xl'>{description.description}</p>
-        <h3 className=" text-highlight">”</h3>
+        <h3 className="text-highlight">”</h3>
       </p>
 
       {/* Full-width Line with Right-Aligned Profile Image */}
@@ -19,8 +19,8 @@ const Card = ({ description }) => {
         <div className="w-full border-t border-gray-300"></div>
         <div className="absolute -top-9 right-10 bg-white p-1 rounded-full border-2 border-gray-200">
           <Image
-            src={description.profileImage}  // Dynamically load the profile image from props
-            alt="Profile Image"
+            src={description.profileImage}
+            alt={`${description.name} Profile`}
             width={65}
             height={65}
             className="rounded-full"
@@ -34,11 +34,13 @@ const Card = ({ description }) => {
         <p className="text-text_color_secondary text-lg">{description.designation}</p>
         
         {/* Website Link */}
-        <p className="text-text_color_secondary hover:underline text-lg">
-          <Link href="https://example.com" target="_blank">
-            example.com
-          </Link>
-        </p>
+        {description.website && (
+          <p className="text-text_color_secondary hover:underline text-lg">
+            <Link href={`https://${description.website}`} target="_blank">
+              {description.website}
+            </Link>
+          </p>
+        )}
       </div>
     </div>
   );

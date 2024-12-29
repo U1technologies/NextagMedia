@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-4 ml-auto max-sm:mx-auto max-sm:mt-8">
               {/* Social Icons */}
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61569884471503" target="_blank" rel="noreferrer">
                 <Image src={facebookIcon} width={45} height={45} alt="Facebook" />
               </a>
               <a href="https://www.instagram.com/nextagmedia/" target="_blank" rel="noreferrer">
@@ -41,8 +41,8 @@ const Footer = () => {
               <h6 className={`cursor-default block ${Styles.spanHeading}`}>
                 <p className='font-bold'>Quick Links</p>
               </h6>
-              <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/home">Home</Link>
-              <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/about-us">About Us</Link>
+              <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/">Home</Link>
+              <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/about">About Us</Link>
               <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/contact">Contact</Link>
               <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/privacy-policy">Privacy Policy</Link>
               <Link className="cursor-pointer block my-3 w-[80%] text-lg" href="/terms-and-conditions">Terms & Conditions</Link>

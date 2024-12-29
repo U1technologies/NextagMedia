@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
                 information with third parties without your consent.
               </p>
               <div className="flex justify-start">
-                <button className="bg-highlight text-base py-3 px-6 rounded-full hover:bg-highlight hover:text-white">
+                <button className="bg-highlight text-base py-3 px-6 rounded-full">
                   READ MORE
                 </button>
               </div>
@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
             {/* Right Section */}
             <div className="flex justify-center items-center w-full lg:w-[50%]">
               <Image
-                src="/assets/images/home-page/Privacy.svg"
+                src="/assets/Images/home-page/Privacy.svg"
                 alt="Hero Image"
                 height={50}
                 width={50}
