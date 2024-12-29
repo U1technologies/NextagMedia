@@ -21,7 +21,7 @@ const Hero = () => {
                             <button className="primary-button py-3 px-6 rounded-lg hover:bg-highlight hover:text-white mr-6">
                                 Contact Us
                             </button>
-                            <Link href="/service">
+                            <Link href="/service/performance-marketing">
                             <button className="primary-button-outline py-3 px-6 rounded-lg hover:bg-highlight hover:text-text_color_primary">
                                 Explore Services
                             </button>
