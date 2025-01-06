@@ -30,9 +30,9 @@ const Testimonial = () => {
 
   return (
     <div className='bg-secondary'>
-      <div className={`mx-[5%] md:mx-[7.5%] py-16`}>
+      <div className={`mx-[5%] md:mx-[7.5%] pt-16 pb-8`}>
         <p className='font-semibold text-2xl text-text_color_secondary text-center'>{H2_OUR_CLIENT}</p>
-        <div className={`flex overflow-x-auto pt-16 pb-4 gap-12 ${Styles.customScroll}`}>
+        <div className={`flex overflow-x-auto gap-12 ${Styles.customScroll}`}>
           {details.map((item, index) => (
             <div key={index} className="flex-shrink-0">
               <Card description={item} />

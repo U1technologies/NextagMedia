@@ -1,7 +1,7 @@
 .story {
   -webkit-box-orient: vertical;
   overflow-y: auto;
-  max-height: 130px;
+  max-height: 190px;
 }
 .story::-webkit-scrollbar {
   display: none;
@@ -22,7 +22,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .story {
-    max-height: 150px;
+    max-height: 160px;
   }
 }
 

@@ -22,7 +22,16 @@ const Hero = () => {
                                 Contact Us
                             </button>
                             <Link href="/service/performance-marketing">
-                            <button className="primary-button-outline py-3 px-6 rounded-lg hover:bg-highlight hover:text-text_color_primary">
+                            <button className="primary-button-outline py-3 px-6 rounded-lg hover:bg-highlight hover:text-text_color_primary"
+                                                        //  style={{
+                                                        //     backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+                                                        //     color: '#333333',
+                                                        //     border: 'none',
+                                                        //     padding: '10px 20px',
+                                                        //     borderRadius: '5px',
+                                                        //     cursor: 'pointer',
+                                                        //   }}
+                                                          >
                                 Explore Services
                             </button>
                         </Link>

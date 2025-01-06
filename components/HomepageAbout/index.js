@@ -28,7 +28,11 @@ const AboutCompany = () => {
             </p>
             <div className="flex justify-center md:justify-start pb-4 max-md:mx-auto">
               <Link href="/about">
-                <button className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-2">
+                <button className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-2"
+                style={{
+              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+              cursor: 'pointer',
+            }}>
                   MORE ABOUT US
                 </button>
               </Link>

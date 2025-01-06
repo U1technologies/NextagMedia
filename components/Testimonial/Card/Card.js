@@ -5,12 +5,13 @@ import Styles from "./card.module.css";
 
 const Card = ({ description }) => {
   return (
-    <div className="flex flex-col w-[22rem] 2xl:w-[26rem] p-8 bg-primary rounded-lg shadow-md border border-gray-300">
+    <section>
+    <div className="flex flex-col w-[22rem] 2xl:w-[26rem] max-sm:mx-auto p-8 bg-primary rounded-lg shadow-md border border-gray-300">
       
       {/* Testimonial Description */}
       <p className={`text-text_color_secondary text-base mb-12 leading-relaxed ${Styles.story}`}>
         <h3 className="text-highlight">“</h3> 
-        <p className='text-xl'>{description.description}</p>
+        <p className='text-lg lg:text-xl'>{description.description}</p>
         <h3 className="text-highlight">”</h3>
       </p>
 
@@ -43,6 +44,7 @@ const Card = ({ description }) => {
         )}
       </div>
     </div>
+    </section>
   );
 };
 

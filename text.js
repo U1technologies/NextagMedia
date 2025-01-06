@@ -128,7 +128,8 @@ export const PERFORMANCE_MARKETING_PAGE = {
   title: 'Performance Marketing',
   description: 'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
   image: '/assets/Images/home-page/paid-marketing.svg',
-  processImage: "/assets/Images/home-page/paid-markett.svg",
+  processImage: "/assets/Images/home-page/performance-market.svg",
+  mobileProcessImage: "/assets/Images/home-page/performance-market-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Unlock the full potential of your business with tailored performance marketing strategies designed to drive traffic, boost conversions, and maximize ROI across all platforms.',
     features: [
@@ -192,6 +193,7 @@ export const SOCIAL_MEDIA_PAGE = {
   description: 'Boost your brand’s visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.',
   image: '/assets/Images/home-page/social-media.svg',
   processImage: "/assets/Images/home-page/social-media-process.svg",
+  mobileProcessImage: "/assets/Images/home-page/social-media-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Empower your brand with dynamic social media strategies that drive engagement, build a loyal audience, and amplify your online presence across platforms.',
   features: [
@@ -253,6 +255,7 @@ export const WEB_DEVELOPMENT_PAGE = {
   description: 'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
   image: '/assets/Images/home-page/website-dev.svg',
   processImage: "/assets/Images/home-page/web-developmentt.svg",
+  mobileProcessImage: "/assets/Images/home-page/web-dev-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Craft seamless, responsive, and high-performance websites tailored to your business needs, designed to captivate your audience and achieve your goals.',
   features: [
@@ -319,6 +322,7 @@ export const SEO_PAGE = {
   description: 'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
   image: '/assets/Images/home-page/SEO-hp.svg',
   processImage: "/assets/Images/home-page/SEO-process.svg",
+  mobileProcessImage: "/assets/Images/home-page/seo-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Boost your online visibility with advanced SEO techniques that drive organic traffic, improve rankings, and ensure your brand stays ahead of the competition.',
   features: [
@@ -380,6 +384,7 @@ export const LEAD_GENERATION_PAGE = {
   description: 'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
   image: '/assets/Images/home-page/leads-gen.svg',
   processImage: "/assets/Images/home-page/leads-generate.svg",
+  mobileProcessImage: "/assets/Images/home-page/lead-gen-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Accelerate business growth with targeted lead generation strategies that deliver qualified prospects straight to your sales pipeline.',
   features: [
@@ -442,6 +447,7 @@ export const PERSONAL_BRANDING_PAGE = {
   description: 'Build a strong, authentic personal brand that sets you apart in the digital landscape. Nextagmedia helps you showcase your expertise, amplify your voice, and create a compelling online presence to inspire trust and attract opportunities.',
   image: '/assets/Images/home-page/personal-branding.svg',
   processImage: "/assets/Images/home-page/personal-brand.svg",
+  mobileProcessImage: "/assets/Images/home-page/personal-brand-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Build a compelling personal brand that resonates with your audience, establishes your authority, and drives opportunities across your industry.',
   features: [
@@ -508,6 +514,7 @@ export const UGC_PAGE = {
   description: 'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
   image: '/assets/Images/home-page/About us.svg',
   processImage: "/assets/Images/home-page/UGC-process.svg",
+  mobileProcessImage: "/assets/Images/home-page/ugc-mobile.svg",
   sectionHeading: 'Core Features',
   sectionSubtitle: 'Leverage authentic user-generated content to strengthen trust, increase engagement, and create a lasting impact on your target audience.',
   features: [

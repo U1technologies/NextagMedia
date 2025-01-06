@@ -59,8 +59,8 @@ const MobileMenu = () => {
         <div className="relative p-4">
           <Image
             src={crossIcon}
-            width={25}
-            height={25}
+            width={15}
+            height={15}
             alt="Close Menu Icon"
             className="absolute right-4 top-4 cursor-pointer"
             onClick={handleDrawerClose}

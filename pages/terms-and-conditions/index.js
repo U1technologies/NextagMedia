@@ -16,7 +16,11 @@ const TermsAndConditions = () => {
                 These Terms and Conditions govern your use of the services provided by U1 TECHNOLOGIES PRIVATE LIMITED. By accessing or using our platform, you agree to comply with and be bound by these terms.
               </p>
               <div className="flex justify-start">
-                <button className="bg-highlight text-base py-3 px-6 rounded-full hover:bg-highlight hover:text-white">
+                <button className="bg-highlight text-base py-3 px-6 rounded-full hover:bg-highlight hover:text-white"
+                style={{
+            backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+            cursor: 'pointer',
+          }}>
                   READ MORE
                 </button>
               </div>
@@ -72,9 +76,10 @@ const TermsAndConditions = () => {
           <h3 className="mt-4 text-text_color_primary">Data Privacy</h3>
           <p className="text-lg lg:text-xl text-start py-4 text-text_color_secondary">
              Your use of our platform may involve the collection and processing of personal data. Please refer to our{' '}
-               <Link href="/privacy-policy">
-                  <a className="text-blue-500 underline">Privacy Policy</a>
-                     </Link>{' '}
+             <Link href="/privacy-policy" className="text-blue-500 underline">
+                    Privacy Policy
+               </Link>
+                       {' '}
                                for details on how we handle your data.
                                   </p>
           <h3 className="mt-4 text-text_color_primary">Amendments</h3>

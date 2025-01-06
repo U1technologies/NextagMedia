@@ -28,6 +28,10 @@ const AboutUsSection = () => {
             <span 
               className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-3 cursor-pointer"
               onClick={scrollToValuesSection}
+              style={{
+                backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+                cursor: 'pointer',
+              }}
             >
               KNOW MORE
             </span>
