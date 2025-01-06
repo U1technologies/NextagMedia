@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const ServiceProcess = ({ processImage }) => {
+const ServiceProcess = ({ processImage, mobileProcessImage }) => {
   return (
     <div>
       <section>
@@ -11,13 +11,22 @@ const ServiceProcess = ({ processImage }) => {
         </div>
 
         <div className="flex justify-center items-center">
-          {/* Full-width image */}
+          {/* Full-width image for large screens */}
           <Image
             src={processImage}
             alt="Service process illustration"
             width={1920}
             height={1080}
-            className="object-cover w-[90%] h-auto"
+            className="object-cover w-[90%] h-auto max-md:hidden"
+          />
+
+          {/* Mobile image for screens below max-md */}
+          <Image
+            src={mobileProcessImage}
+            alt="Mobile service process illustration"
+            width={1920}
+            height={1080}
+            className="object-cover w-[90%] h-auto md:hidden"
           />
         </div>
       </section>

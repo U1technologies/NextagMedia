@@ -113,7 +113,8 @@ const ServicePage = () => {
           sectionHeading={currentService.sectionHeading}
           sectionSubtitle={currentService.sectionSubtitle}
         />
-        <ServiceProcess processImage={currentService.processImage} />
+        <ServiceProcess processImage={currentService.processImage}
+        mobileProcessImage={currentService.mobileProcessImage} />
         <FaqComponent faqSection={currentService.faqSection} />
       </div>
     </div>

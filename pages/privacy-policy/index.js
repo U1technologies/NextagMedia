@@ -18,7 +18,11 @@ const PrivacyPolicy = () => {
                 information with third parties without your consent.
               </p>
               <div className="flex justify-start">
-                <button className="bg-highlight text-base py-3 px-6 rounded-full">
+                <button className="bg-highlight text-base py-3 px-6 rounded-full"
+                style={{
+                  backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+                  cursor: 'pointer',
+                }}>
                   READ MORE
                 </button>
               </div>
