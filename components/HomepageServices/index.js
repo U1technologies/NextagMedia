@@ -133,6 +133,13 @@ const OurServices = () => {
               imgSrc: '/assets/Images/home-page/personal-branding.svg',
               link: '/service/personal-branding',
             },
+            {
+              title: 'UGC Content',
+              description:
+                'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
+              imgSrc: '/assets/Images/home-page/user-content.svg',
+              link: '/service/ugc-content',
+            },
           ].map(({ title, description, imgSrc, link }, idx) => (
             <div
               key={idx}

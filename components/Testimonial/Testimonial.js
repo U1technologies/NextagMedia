@@ -6,14 +6,14 @@ const Testimonial = () => {
   const H2_OUR_CLIENT = "Customer Stories";
   const details = [
     {
-      profileImage: "/assets/Images/home-page/michal.png",
-      name: "Rahul Chaturvedi",
+      profileImage: "/assets/Images/home-page/rohan.jpeg",
+      name: "Rohan Chaturvedi",
       designation: "Growth Manager, Wakefit",
       description: "Great work driving sales through affiliate marketing. Your efforts have significantly boosted our growth and increased conversions!",
       website: "wakefit.co"
     },
     {
-      profileImage: "/assets/Images/home-page/sarah.png",
+      profileImage: "/assets/Images/home-page/erina.jpeg",
       name: "Irina",
       designation: "Senior Manager, Advertise ",
       description: "The ROI we've seen from their PPC campaigns has been remarkable. They truly understand our market and deliver results consistently.",
