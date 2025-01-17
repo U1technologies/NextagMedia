@@ -531,7 +531,7 @@ export const UGC_PAGE = {
     {
       title: "Community Building & Engagement",
       description: "Create and manage online communities that foster collaboration, creativity, and brand advocacy.",
-      image: "/assets/Images/home-page/community-engagement.png",
+      image: "/assets/Images/home-page/community-engage.png",
     },
     {
       title: "Content Curation & Management",

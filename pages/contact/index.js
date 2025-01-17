@@ -157,8 +157,8 @@ const ContactForm = () => {
                       <Image
                         src={
                           formData.selectedServices.includes(service.name)
-                            ? '/assets/images/home-page/checked.svg' 
-                            : '/assets/images/home-page/unchecked.svg'
+                            ? '/assets/Images/home-page/checked.svg' 
+                            : '/assets/Images/home-page/unchecked.svg'
                         }
                         alt="checkbox"
                         width={20}

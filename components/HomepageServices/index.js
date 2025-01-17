@@ -185,7 +185,7 @@ const OurServices = () => {
           onClick={() => scroll('left')}
         >
           <Image
-            src="/assets/Images/home-page/Group1.svg"
+            src="/assets/Images/home-page/leftArrow.svg"
             alt="Left Arrow"
             width={36}
             height={36}
@@ -196,7 +196,7 @@ const OurServices = () => {
           onClick={() => scroll('right')}
         >
           <Image
-            src="/assets/Images/home-page/Group2.svg"
+            src="/assets/Images/home-page/rightArrow.svg"
             alt="Right Arrow"
             width={36}
             height={36}
