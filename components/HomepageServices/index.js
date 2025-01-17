@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Styles from './index.module.css'
+import Styles from './index.module.css';
 
 const OurServices = () => {
   const scrollRef = useRef(null);
@@ -9,9 +9,15 @@ const OurServices = () => {
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (direction === 'left') {
-      current.scrollLeft -= 300;
+      current.scrollBy({
+        left: -300,
+        behavior: 'smooth', // This makes the scroll smooth
+      });
     } else {
-      current.scrollLeft += 300;
+      current.scrollBy({
+        left: 300,
+        behavior: 'smooth', // This makes the scroll smooth
+      });
     }
   };
 
@@ -19,11 +25,13 @@ const OurServices = () => {
     <div className="bg-secondary pb-12">
       <section className="mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row">
         <div className="w-full text-left md:hidden mb-10">
-          <span className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary"
-             style={{
+          <span
+            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary"
+            style={{
               backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
               cursor: 'pointer',
-            }}>
+            }}
+          >
             SERVICES
           </span>
           <h2 className="mt-6 text-4xl font-bold">
@@ -42,11 +50,13 @@ const OurServices = () => {
         </div>
         {/* Right Section: Content */}
         <div className="w-full md:w-1/2 md:pl-8 text-left">
-          <span className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary max-md:hidden"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
-            cursor: 'pointer',
-          }}>
+          <span
+            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary max-md:hidden"
+            style={{
+              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+              cursor: 'pointer',
+            }}
+          >
             SERVICES
           </span>
           <h2 className="mt-6 text-4xl font-bold max-md:hidden">
@@ -75,20 +85,9 @@ const OurServices = () => {
 
       {/* Service Cards Section */}
       <div className="mx-auto max-w-[85%] 2xl:w-[80%] pt-8 max-md:pt-0 relative">
-        {/* <button
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
-          onClick={() => scroll('left')}
-        >
-          <Image
-            src="/assets/Images/home-page/arrow-1.svg"
-            alt="Left Arrow"
-            width={50}
-            height={50}
-          />
-        </button> */}
         <div
           ref={scrollRef}
-          className={`flex space-x-8 overflow-x-scroll  ${Styles.customScroll}`}
+          className={`flex space-x-8 overflow-x-scroll ${Styles.customScroll}`}
         >
           {[
             {
@@ -133,10 +132,17 @@ const OurServices = () => {
               imgSrc: '/assets/Images/home-page/personal-branding.svg',
               link: '/service/personal-branding',
             },
+            {
+              title: 'UGC Content',
+              description:
+              'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
+              imgSrc: '/assets/Images/home-page/user-content.svg',
+              link: '/service/ugc-content',
+                          },
           ].map(({ title, description, imgSrc, link }, idx) => (
             <div
               key={idx}
-              className="flex min-w-[380px] h-[420px] mb-1 flex-col items-center rounded-tl-[52px] rounded-br-[52px] border border-gray-200 bg-primary p-6 shadow-md max-sm:min-w-full"
+              className="flex min-w-[380px] h-[420px] mb-1 flex-col items-center rounded-tl-[52px] rounded-br-[52px] border border-gray-200 bg-primary backdrop-blur-2xl p-6 shadow-md max-sm:min-w-full"
             >
               <div className="flex h-2/5 w-full justify-center">
                 <Image
@@ -144,7 +150,7 @@ const OurServices = () => {
                   alt={title}
                   width={400}
                   height={400}
-                  className="h-full object-cover"
+                  className="h-full object-contain"
                 />
               </div>
               <h3 className="mt-8 w-full text-left text-2xl font-semibold text-text_color_primary">
@@ -170,18 +176,35 @@ const OurServices = () => {
             </div>
           ))}
         </div>
-        {/* <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10"
+      </div>
+
+      {/* Left and Right Scroll Buttons Section */}
+      <div className="mt-6 flex justify-center space-x-2">
+        <button
+          className="z-10"
+          onClick={() => scroll('left')}
+        >
+          <Image
+            src="/assets/Images/home-page/leftArrow.svg"
+            alt="Left Arrow"
+            width={36}
+            height={36}
+          />
+        </button>
+        <button
+          className="z-10"
           onClick={() => scroll('right')}
         >
           <Image
-            src="/assets/Images/home-page/arrow-2.svg"
+            src="/assets/Images/home-page/rightArrow.svg"
             alt="Right Arrow"
-            width={50}
-            height={50}
+            width={36}
+            height={36}
           />
-        </button> */}
+        </button>
       </div>
+
+      {/* Explore All Button */}
       <div className="mt-12 text-center">
         <Link
           href={'/service/performance-marketing'}

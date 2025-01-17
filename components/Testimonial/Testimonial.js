@@ -6,14 +6,14 @@ const Testimonial = () => {
   const H2_OUR_CLIENT = "Customer Stories";
   const details = [
     {
-      profileImage: "/assets/Images/home-page/michal.png",
-      name: "Rahul Chaturvedi",
+      profileImage: "/assets/Images/home-page/rohan.jpeg",
+      name: "Rohan Chaturvedi",
       designation: "Growth Manager, Wakefit",
       description: "Great work driving sales through affiliate marketing. Your efforts have significantly boosted our growth and increased conversions!",
       website: "wakefit.co"
     },
     {
-      profileImage: "/assets/Images/home-page/sarah.png",
+      profileImage: "/assets/Images/home-page/erina.jpeg",
       name: "Irina",
       designation: "Senior Manager, Advertise ",
       description: "The ROI we've seen from their PPC campaigns has been remarkable. They truly understand our market and deliver results consistently.",
@@ -21,10 +21,18 @@ const Testimonial = () => {
     },
     {
       profileImage: "/assets/Images/home-page/emily.png",
-      name: "Emily Rodriguez",
-      designation: "Founder, Digital Edge",
-      description: "Their SEO strategies have helped us achieve top rankings for our key terms. Our organic traffic has increased by 150% in just 6 months.",
-      website: "advertise.net"
+name: "Nancy",
+designation: "BD Manager, Linkbux",
+description: "With the help of performance marketing, our sales have increased significantly in a short time. The team has done incredible work, and we're really impressed with the results they've delivered.",
+website: "linkbux.com"
+
+    },
+    {
+      profileImage: "/assets/Images/home-page/ratul.jpeg",
+      name: "Ratul Das",
+      designation: "Head of Marketing, littlebox",
+      description: "Thanks to the targeted ads and promotions run by the team, we saw a significant increase in orders within just a few months. Their efforts have truly made a difference.",
+      website: "littleboxindia.com"      
     }
   ];
 

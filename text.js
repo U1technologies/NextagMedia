@@ -512,7 +512,7 @@ export const PERSONAL_BRANDING_PAGE = {
 export const UGC_PAGE = {
   title: 'UGC Content',
   description: 'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
-  image: '/assets/Images/home-page/About us.svg',
+  image: '/assets/Images/home-page/user-content.svg',
   processImage: "/assets/Images/home-page/UGC-process.svg",
   mobileProcessImage: "/assets/Images/home-page/ugc-mobile.svg",
   sectionHeading: 'Core Features',
@@ -531,7 +531,7 @@ export const UGC_PAGE = {
     {
       title: "Community Building & Engagement",
       description: "Create and manage online communities that foster collaboration, creativity, and brand advocacy.",
-      image: "/assets/Images/home-page/community-engagement.png",
+      image: "/assets/Images/home-page/community-engage.png",
     },
     {
       title: "Content Curation & Management",
