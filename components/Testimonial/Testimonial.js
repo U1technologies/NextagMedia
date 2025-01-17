@@ -21,10 +21,18 @@ const Testimonial = () => {
     },
     {
       profileImage: "/assets/Images/home-page/emily.png",
-      name: "Emily Rodriguez",
-      designation: "Founder, Digital Edge",
-      description: "Their SEO strategies have helped us achieve top rankings for our key terms. Our organic traffic has increased by 150% in just 6 months.",
-      website: "advertise.net"
+name: "Nancy",
+designation: "BD Manager, Linkbux",
+description: "With the help of performance marketing, our sales have increased significantly in a short time. The team has done incredible work, and we're really impressed with the results they've delivered.",
+website: "linkbux.com"
+
+    },
+    {
+      profileImage: "/assets/Images/home-page/ratul.jpeg",
+      name: "Ratul Das",
+      designation: "Head of Marketing, littlebox",
+      description: "Thanks to the targeted ads and promotions run by the team, we saw a significant increase in orders within just a few months. Their efforts have truly made a difference.",
+      website: "littleboxindia.com"      
     }
   ];
 
