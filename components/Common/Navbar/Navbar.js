@@ -7,7 +7,6 @@ import Button from '../../ContactUsButton';
 import MobileMenu from './MobileMenu';
 import { FaChevronDown } from 'react-icons/fa';
 
-// Dummy data for navbar contents
 const NAVBAR_CONTENT = [
   { value: 'Home', pathName: '/' },
   { value: 'About', pathName: '/about' },
@@ -15,16 +14,20 @@ const NAVBAR_CONTENT = [
     value: 'Services',
     subMenu: [
       { value: 'Performance Marketing', pathName: '/service/performance-marketing' },
-      { value: 'SEO Services', pathName: '/service/seo' },
-      { value: 'Social Media Marketing', pathName: '/service/social-media-marketing' },
-      { value: 'Content Marketing', pathName: '/service/content-marketing' },
+      { value: 'Social Media Management', pathName: '/service/social-media-management' },
+      { value: 'Web Development', pathName: '/service/web-development' },
+      { value: 'SEO', pathName: '/service/seo' },
+      { value: 'Lead Generation', pathName: '/service/lead-generation' },
+      { value: 'Personal Branding', pathName: '/service/personal-branding' },
+      { value: 'UGC Content', pathName: '/service/ugc-content' },
     ],
   },
 ];
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [servicesMenuOpen, setServicesMenuOpen] = useState(false); // State for toggling dropdown
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const [closeDropdownTimeout, setCloseDropdownTimeout] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -45,6 +48,20 @@ const Navbar = () => {
     };
   }, [prevScrollPos]);
 
+  const handleMouseEnter = () => {
+    if (closeDropdownTimeout) {
+      clearTimeout(closeDropdownTimeout); // Prevent closing when entering the dropdown
+    }
+    setServicesMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setServicesMenuOpen(false);
+    }, 200); // Small delay to prevent flickering
+    setCloseDropdownTimeout(timeout);
+  };
+
   const pathsWithoutNavbar = [];
   if (pathsWithoutNavbar.includes(router.pathname)) {
     return null;
@@ -58,38 +75,39 @@ const Navbar = () => {
           <div className="flex justify-evenly items-center">
             {NAVBAR_CONTENT.map(({ value, pathName, subMenu }, index) => (
               <div
-              key={index}
-              className={`relative ml-9 cursor-pointer`}
-              onMouseEnter={() => subMenu && setServicesMenuOpen(true)}
-              onMouseLeave={() => subMenu && setServicesMenuOpen(false)}
-            >
-              {pathName ? (
-                <Link href={pathName}>
-                  <p className="text-text_color_primary hover:text-[#5acbf5]">{value}</p>
-                </Link>
-              ) : (
-                <p className="flex items-center text-text_color_primary hover:text-[#5acbf5]">
-                  {value}
-                  {subMenu && <FaChevronDown className="ml-2 text-base" />}
-                </p>
-              )}
-              {subMenu && servicesMenuOpen && (
-                <div
-                  className={`absolute top-full left-0 mt-2 bg-white shadow-lg ${Styles.dropdownMenu}`}
-                >
-                  {subMenu.map(({ value, pathName }, subIndex) => (
-                    <Link
-                      href={pathName}
-                      key={subIndex}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {value}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
+                key={index}
+                className="relative ml-9 cursor-pointer"
+                onMouseEnter={subMenu ? handleMouseEnter : null}
+                onMouseLeave={subMenu ? handleMouseLeave : null}
+              >
+                {pathName ? (
+                  <Link href={pathName}>
+                    <p className="text-text_color_primary hover:text-[#5acbf5]">{value}</p>
+                  </Link>
+                ) : (
+                  <div className="flex items-center">
+                    <p className="text-text_color_primary hover:text-[#5acbf5]">{value}</p>
+                    {subMenu && <FaChevronDown className="ml-2 text-base" />}
+                  </div>
+                )}
+                {subMenu && servicesMenuOpen && (
+                  <div
+                    className={`absolute top-full left-0 mt-2 bg-white shadow-lg ${Styles.dropdownMenu}`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {subMenu.map(({ value, pathName }, subIndex) => (
+                      <Link
+                        href={pathName}
+                        key={subIndex}
+                        className="block px-4 py-2 hover:bg-[#5acbf5] hover:text-white hover:border hover:rounded-full transition-all"
+                      >
+                        {value}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>

@@ -18,6 +18,7 @@ html {
   --section-width: 85%;
   --section-width-mobile: 90%;
   --font-primary: 'Roboto', sans-serif;
+  /* --font-primary: 'Montserrat', sans-serif; */
   --font-weight-bold: 700;
   --font-weight-normal: 400;
   --title-padding: 0.5rem 0;
@@ -36,7 +37,7 @@ html {
 @media (min-width: 1440px) {
   :root {
     --font-size-title: clamp(2rem,10vw, 2.5rem);
-    --font-size-h1: clamp(3.5rem, 10vw, 4.5rem);
+    --font-size-h1: clamp(3.5rem, 10vw, 4rem);
     --font-size-h2: clamp(1.75rem, 30vw, 3rem);
     --font-size-h3: clamp(1.2rem, 10vw, 2rem);
     --font-size-h4: clamp(1.1rem, 10vw, 1.38rem);
@@ -148,7 +149,7 @@ body::-webkit-scrollbar-thumb:hover {
 .primary-button {
   color: var(--primary-text-color);
   font-size: var(--font-size-paragraph);
-  background-image: linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%);
+  background-image: linear-gradient(135deg, #FFCA28 20%, #FFB300 60%, #FFA000 100%);
   border-radius: 6px;
   padding: 9px 20px;
   border: none;
