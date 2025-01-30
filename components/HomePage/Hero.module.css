@@ -1,19 +1,19 @@
-/* .gradientText {
-    background: linear-gradient(to bottom right, #00ffaa , #0D4DFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.gradientText1 {
+  background: linear-gradient(to bottom right, #c656a0, #5acbf5); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.description{
-    color: var(--secondary-text-color);
-}
-.wrapper:focus {
-        outline: none; 
-        -webkit-tap-highlight-color: transparent; 
-      }
 
-@media (max-width:768px) {
-  .description{
-    font-size: 1.3rem;
-  }
+.gradientText2 {
+  background: linear-gradient(to bottom right, #3ca8cf, hsl(47, 74%, 65%)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-       */
+
+.gradientText3 {
+  background: linear-gradient(to bottom right, #f7d149, #b14a8e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+      
