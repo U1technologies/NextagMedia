@@ -248,7 +248,7 @@ const Hero = () => {
           </>
         ) : currentParagraph === 1 ? (
           <>
-            Your story, our <span className={Styles.gradientText2}>strategy</span>, everyone's attention.
+            Your story, our <span className={Styles.gradientText2}>strategy</span>, everyone&rsquo;s attention.
           </>
         ) : (
           <>
