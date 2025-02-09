@@ -1,88 +1,89 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Drawer from '@mui/material/Drawer';
-import burgerMenu from '@/public/assets/Images/home-page/burgerMenu.svg'
+import { useRouter } from 'next/router';
+import burgerMenu from '@/public/assets/Images/home-page/burgerMenu.svg';
 import crossIcon from '@/public/assets/Images/home-page/close.svg';
 import Styles from './index.module.css';
-import { useRouter } from 'next/router';
 import Button from '@/components/ContactUsButton';
 
-// Dummy data for navbar contents
 const NAVBAR_CONTENT = [
   { value: 'Home', pathName: '/' },
   { value: 'About', pathName: '/about' },
-  { value: 'Services', pathName: '/service/performance-marketing' },
-  // { value: 'Blog', pathName: '/blog' },
+  { 
+    value: 'Services', 
+    hasArrow: true,
+    subMenu: [
+      { value: 'Performance Marketing', pathName: '/service/performance-marketing' },
+      { value: 'Social Media Management', pathName: '/service/social-media-management' },
+      { value: 'Web Development', pathName: '/service/web-development' },
+      { value: 'SEO', pathName: '/service/seo' },
+      { value: 'Lead Generation', pathName: '/service/lead-generation' },
+      { value: 'Personal Branding', pathName: '/service/personal-branding' },
+      { value: 'UGC Content', pathName: '/service/ugc-content' },
+    ],
+  },
 ];
 
 const MobileMenu = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const router = useRouter();
 
-  const handleDrawerOpen = () => {
-    setIsDrawerOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setIsDrawerOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleRedirect = (pathName) => {
     router.push(pathName);
-    setTimeout(() => {
-      setIsDrawerOpen(false);
-    }, 300);
+    setIsMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    router.push('/contact');
+    setIsMenuOpen(false);
   };
 
   return (
     <div className={Styles.burgerDiv}>
-      <button
-        aria-controls="mobile-menu"
-        aria-haspopup="true"
-        onClick={handleDrawerOpen}
-        className="flex"
-      >
+      {/* Toggle Burger Menu / Close Icon */}
+      <button onClick={toggleMenu} className="flex">
         <Image
-          src={burgerMenu}
+          src={isMenuOpen ? crossIcon : burgerMenu}
           width={25}
           height={25}
-          alt="Navigation Menu Icon"
-          className="mt-1"
+          alt="Menu Icon"
         />
       </button>
-      <Drawer
-        anchor="right"
-        open={isDrawerOpen}
-        onClose={handleDrawerClose}
-        classes={{ paper: Styles.menu }}
-      >
-        <div className="relative p-4">
-          <Image
-            src={crossIcon}
-            width={15}
-            height={15}
-            alt="Close Menu Icon"
-            className="absolute right-4 top-4 cursor-pointer"
-            onClick={handleDrawerClose}
-          />
+      {isMenuOpen && (
+        <div className={`${Styles.menu} ${Styles.menuOpen}`}>
+          {/* Menu Items */}
+          <div className={Styles.menuItems}>
+            {NAVBAR_CONTENT.map(({ value, pathName, hasArrow, subMenu }, index) => (
+              <div key={index} className={Styles.menuItem}>
+                {/* Main Item */}
+                <div className={Styles.mainItem} onClick={() => subMenu ? setServicesOpen(!servicesOpen) : handleRedirect(pathName)}>
+                  <p>{value}</p>
+                  {hasArrow && <span className={`${Styles.arrow} ${servicesOpen ? Styles.rotateArrow : ''}`}>›</span>}
+                </div>
+                {subMenu && servicesOpen && (
+                  <div className={Styles.subMenu}>
+                    {subMenu.map(({ value, pathName }, subIndex) => (
+                      <p key={subIndex} onClick={() => handleRedirect(pathName)} className={Styles.subMenuItem}>
+                        {value}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className={Styles.ctaButtons}>
+            <Button onClick={handleContactClick} />
+          </div>
         </div>
-        <div className="mt-12 px-4">
-          {NAVBAR_CONTENT.map(({ value, pathName }, index) => (
-            <div key={index} className="py-2">
-              <p
-                className="cursor-pointer text-lg font-medium"
-                onClick={() => handleRedirect(pathName)}
-              >
-                {value}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="px-4 mt-6">
-          <Button />
-        </div>
-      </Drawer>
+      )}
     </div>
   );
 };
+
 export default MobileMenu;

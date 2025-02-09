@@ -1,32 +1,75 @@
 .menu {
-    width: 330px;
     position: absolute;
-    background-color: var(--background-color);
-    color: var(--primary-text-color);
-    top: 0;
-    right: 0;
-}
-  
-.navLink {
-    border-bottom: 1px solid #303035;
-    box-shadow: none;
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    width: 260px;
-    margin-left: 20px;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background: #FEFEFE;
+    box-shadow: 0 2px 4px rgba(156, 163, 175, 0.2); 
+    padding: 2px 0;
+    z-index: 999;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.menu div::-webkit-scrollbar {
-    display: none;
+.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-.menu div li {
-    font-weight: 300;
+/* Menu Items */
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.menuItem {
+    padding: 8px ;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mainItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    color: #888;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotateArrow {
+    transform: rotate(90deg);
+}
+
+.subMenu {
+    padding-left: 20px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subMenuItem {
+    padding: 8px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.subMenuItem:hover {
+    color: #5acbf5;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.logo {
-    margin-bottom: 20px;
-    margin-left: 20px;
 }

@@ -10,18 +10,20 @@
 .partnersHeading{
     color: var(--primary-text-color);
 }
-.RightSlideButton{
-    width: 20px;
-    height: 20px;
+.RightSlideButton {
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
-    border-radius: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.19);
-    background: #F8F9FA;
-    margin-left: 15px;
-    transform: rotate(180deg);
-}
-.RightSlideButton:hover{
+    border-radius: 50%;
+    border: 1px solid #c656a0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .RightSlideButton:hover {
     opacity: 0.8;
-    border: 1px solid grey;
-    background-color: #f0ecec;
-}
+  }
+   

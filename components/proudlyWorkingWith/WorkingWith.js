@@ -45,7 +45,7 @@ const WorkingWith = ({ data }) => {
     };
   }, [partners]);
   return (
-    <div className='py-4'>
+    <div className='py-4 bg-primary'>
     <div className={styles.main}>
       <div className={styles.container}>
         <section className={styles.container}>
