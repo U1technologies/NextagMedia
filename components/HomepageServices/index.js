@@ -159,20 +159,19 @@ const OurServices = () => {
               <p className="mt-2 text-lg lg:text-xl line-clamp-4 w-full text-left text-text_color_secondary">
                 {description}
               </p>
-              <div className="mt-auto flex w-full justify-center">
-                <Link href={link}>
-                  <button className="flex w-fit items-center rounded-full border border-highlight bg-primary px-2 py-1 text-lg text-text_color_primary">
-                    <p className="mx-auto">View More</p>
-                    <Image
-                      src="/assets/Images/home-page/right-arrow.svg"
-                      alt="Arrow Icon"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                  </button>
-                </Link>
-              </div>
+              <div className="flex flex-row w-full justify-start mt-4">
+  <Link href={link}>
+    <button className="text-lg text-[#c656a0] hover:text-[#ffc700] flex items-center gap-3">
+      <span>Read More</span>
+      <Image
+        src="/assets/Images/home-page/right-arrow.svg"
+        alt="Arrow Icon"
+        width={16}
+        height={16}
+      />
+    </button>
+  </Link>
+</div>
             </div>
           ))}
         </div>

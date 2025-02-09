@@ -208,7 +208,7 @@ const Hero = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentParagraph((prev) => (prev + 1) % paragraphs.length);
-      }, 2000); // Change every 2 seconds
+      }, 3000); // Change every 2 seconds
   
       return () => clearInterval(interval); // Cleanup interval on unmount
     }, [paragraphs.length]);
@@ -240,8 +240,8 @@ const Hero = () => {
   <div className="flex flex-col lg:grid lg:grid-cols-2 w-full h-full">
     
     {/* Left Half - Content */}
-    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 pl-0 lg:pl-12 xl:pl-24 text-center lg:text-left">
-      <h1 className="font-bold w-full max-sm:text-[3rem]">
+    <div className="flex flex-col justify-center items-center lg:items-start space-y-4 pl-0 lg:pl-12 text-center lg:text-left">
+      <h1 className="font-bold w-full max-lg:w-[90%] max-sm:text-[3rem]">
         {currentParagraph === 0 ? (
           <>
             Your partner in digital <span className={Styles.gradientText1}>transformation.</span>
@@ -394,7 +394,7 @@ const Hero = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="primary-button py-2 px-6 rounded-lg hover:bg-highlight hover:text-white"
+            className="text-lg bg-highlight py-2 px-6 rounded-lg hover:bg-[#5acbf5] hover:text-white"
           >
             Submit
           </button>

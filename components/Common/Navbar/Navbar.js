@@ -32,21 +32,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
       if (document.getElementById('navbar')) {
-        if (prevScrollPos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '0';
-        } else {
-          document.getElementById('navbar').style.top = '-100px';
-        }
-        setPrevScrollPos(currentScrollPos);
+        document.getElementById('navbar').style.top = '0';
       }
     };
+  
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos]);
+  }, []);
+  
 
   const handleMouseEnter = () => {
     if (closeDropdownTimeout) {
