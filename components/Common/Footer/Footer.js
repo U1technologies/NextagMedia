@@ -212,7 +212,7 @@ const Footer = () => {
           <div className="pt-2 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
   {/* Copyright - Centered on Small Screens, Left-Aligned on Larger Screens */}
   <div className="text-lg w-full md:w-auto">
-    &copy; {new Date().getFullYear()} Nextagmedia by U1 Technologies. All Rights Reserved.
+    &copy; {new Date().getFullYear()} Nextagmedia by U1 Technologies Pvt. Ltd. All Rights Reserved.
   </div>
 
   {/* Privacy Policy & Terms - Centered on Small Screens, Right-Aligned on Larger Screens */}
