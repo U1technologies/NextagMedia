@@ -188,7 +188,7 @@ const Footer = () => {
                   <div className="bg-highlight p-2 rounded-full">
                     <Image src={phoneIcon} width={20} height={20} alt='Phone Icon' />
                   </div>
-                  <p className="ml-3 text-lg">+91 82929 43921</p>
+                  <p className="ml-3 text-lg">+91 82929 43921, +91 82279 92672</p>
                 </div>
                 <div className="my-3 flex items-center">
                   <div className="bg-highlight p-2 rounded-full">
