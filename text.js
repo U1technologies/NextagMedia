@@ -66,7 +66,7 @@ export const CONTACT_US_PAGE = {
         "icon": "/assets/Images/home-page/location-add.svg", 
         "title": "Visit Us",
         "description": "Meet us in person and discuss your ideas.",
-        "address": "1st floor, B-20 Sector 1, Noida, India"
+        "address": "2nd floor, B-11, Sector 4, Noida, UP, 201301"
       }
     ],
     submitButton: {
