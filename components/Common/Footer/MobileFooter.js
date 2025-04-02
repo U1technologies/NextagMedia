@@ -70,7 +70,7 @@ const MobileFooter = () => {
             </div>
             <div className="flex items-center my-1">
               <Image src={phoneIcon} width={20} height={20} alt="Phone Icon" />
-              <p className="ml-3 text-base text-text_color_secondary">+91 82929 43921</p>
+              <p className="ml-3 text-base text-text_color_secondary">+91 82929 43921, +91 82279 92672</p>
             </div>
             <div className="flex items-center my-1">
               <Image src={emailIcon} width={18} height={18} alt="Email Icon" />

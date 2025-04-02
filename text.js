@@ -60,7 +60,7 @@ export const CONTACT_US_PAGE = {
         "icon": "/assets/Images/home-page/call-us.svg", 
         "title": "Call Us",
         "description": "Connect with our team directly for quick assistance.",
-        "phone": "+91 82929 43921"  
+        "phone": "+91 82929 43921, +91 82279 92672"  
       },
       {
         "icon": "/assets/Images/home-page/location-add.svg", 
