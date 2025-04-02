@@ -182,7 +182,7 @@ const Footer = () => {
                   <div className="bg-highlight p-2 rounded-full">
                     <Image src={locationIcon} width={20} height={20} alt='Location Icon' />
                   </div>
-                  <p className="ml-3 text-lg">1st floor, B-20, Sector 1, Noida, India</p>
+                  <p className="ml-3 text-lg">2nd floor, B-11, Sector 4, Noida, UP, 201301</p>
                 </div>
                 <div className="my-3 flex items-center">
                   <div className="bg-highlight p-2 rounded-full">

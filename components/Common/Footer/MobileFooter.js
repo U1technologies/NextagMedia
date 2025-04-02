@@ -66,7 +66,7 @@ const MobileFooter = () => {
           <div className="flex flex-col mt-2">
             <div className="flex items-center my-1">
               <Image src={locationIcon} width={21} height={21} alt="Location Icon" />
-              <p className="ml-3 text-base text-text_color_secondary">1st floor, B-20, Sector 1, Noida, India</p>
+              <p className="ml-3 text-base text-text_color_secondary">2nd floor, B-11, Sector 4, Noida, UP, 201301</p>
             </div>
             <div className="flex items-center my-1">
               <Image src={phoneIcon} width={20} height={20} alt="Phone Icon" />
