@@ -26,11 +26,7 @@ const OurServices = () => {
       <section className="mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row">
         <div className="w-full text-left md:hidden mb-10">
           <span
-            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary"
-            style={{
-              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
-              cursor: 'pointer',
-            }}
+            className="w-fit rounded-full bg-color_magenta px-6 py-3 text-primary"
           >
             SERVICES
           </span>
@@ -51,17 +47,16 @@ const OurServices = () => {
         {/* Right Section: Content */}
         <div className="w-full md:w-1/2 md:pl-8 text-left">
           <span
-            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary max-md:hidden"
-            style={{
-              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
-              cursor: 'pointer',
-            }}
+            className="w-fit rounded-full bg-color_magenta px-6 py-3 text-primary max-md:hidden"
           >
             SERVICES
           </span>
           <h2 className="mt-6 text-4xl font-bold max-md:hidden">
-            Your Dedicated Partner in Achieving Exceptional Digital Growth
-          </h2>
+  Your Dedicated Partner in Achieving{" "}
+  <span className="text-gradient">Exceptional Digital</span>{" "}
+  Growth
+</h2>
+
           <div className="mt-6 flex flex-col space-y-3">
             {[
               'Higher Conversion Rates',
@@ -69,9 +64,9 @@ const OurServices = () => {
               'Increase Website Traffic',
               '24/7 Promotion',
             ].map((text, idx) => (
-              <div className="flex items-center space-x-2" key={idx}>
+              <div className="flex items-center space-x-4" key={idx}>
                 <Image
-                  src="/assets/Images/home-page/tickk-2.svg"
+                  src="/assets/Images/home-page/icon-tick.svg"
                   alt="Tick Icon"
                   width={20}
                   height={20}
@@ -142,7 +137,7 @@ const OurServices = () => {
           ].map(({ title, description, imgSrc, link }, idx) => (
             <div
               key={idx}
-              className="flex min-w-[380px] h-[420px] mb-1 flex-col items-center rounded-tl-[52px] rounded-br-[52px] border border-gray-200 bg-primary backdrop-blur-2xl p-6 shadow-md max-sm:min-w-full"
+              className="flex min-w-[380px] h-[420px] mb-1 flex-col items-center rounded-2xl bg-primary backdrop-blur-2xl p-6 shadow-md max-sm:min-w-full"
             >
               <div className="flex h-2/5 w-full justify-center">
                 <Image
@@ -161,7 +156,7 @@ const OurServices = () => {
               </p>
               <div className="flex flex-row w-full justify-start mt-4">
   <Link href={link}>
-    <button className="text-lg text-[#c656a0] hover:text-[#ffc700] flex items-center gap-3">
+    <button className="text-lg text-color_magenta hover:text-color_blue flex items-center gap-3">
       <span>Read More</span>
       <Image
         src="/assets/Images/home-page/right-arrow.svg"
@@ -207,13 +202,9 @@ const OurServices = () => {
       <div className="mt-12 text-center">
         <Link
           href={'/service/performance-marketing'}
-          className="inline-block rounded-md bg-highlight px-6 py-3 text-text_color_primary"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
-            cursor: 'pointer',
-          }}
+          className="inline-block primary-button"
         >
-          EXPLORE ALL
+          Explore All
         </Link>
       </div>
     </div>

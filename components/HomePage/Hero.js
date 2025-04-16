@@ -161,7 +161,7 @@ const Hero = () => {
       },
       particles: {
         color: {
-          value: ["#c656a0", "#ffc700", "#5acbf5", "#5acbf5", "#333333", "#6e6e6e"],
+          value: ["#c656a0", "#ffc700", "#DB4D6E", "#5acbf5", "#333333", "#6e6e6e"],
         },
         collisions: {
           enable: true,
@@ -212,6 +212,29 @@ const Hero = () => {
   
       return () => clearInterval(interval); // Cleanup interval on unmount
     }, [paragraphs.length]);
+
+    useEffect(() => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+    
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+    
+      elements.forEach((el) => observer.observe(el));
+    
+      return () => {
+        elements.forEach((el) => observer.unobserve(el));
+      };
+    }, []);
   
     return (
         <section className="relative w-full  overflow-hidden">
@@ -259,14 +282,21 @@ const Hero = () => {
 
       {/* Stats */}
       <div className="flex justify-center lg:justify-start items-center gap-4 pt-5">
-        <div className="flex -space-x-2">
-          <div className="w-14 h-14 rounded-full bg-primary border-2 border-[#c656a0] flex items-center justify-center">
-            <span className="text-sm font-semibold">4.9★</span>
-          </div>
-          <div className="w-14 h-14 rounded-full bg-primary border-2 border-[#5acbf5] flex items-center justify-center">
-            <span className="text-sm font-semibold">500+</span>
-          </div>
-        </div>
+      <div className="flex -space-x-2">
+  <div
+    className="w-14 h-14 rounded-full bg-primary border-2 border-[#c656a0] flex items-center justify-center pulse-avatar"
+    style={{ animationDelay: '0s' }}
+  >
+    <span className="text-sm font-semibold">4.9★</span>
+  </div>
+  <div
+    className="w-14 h-14 rounded-full bg-primary border-2 border-[#5acbf5] flex items-center justify-center pulse-avatar"
+    style={{ animationDelay: '0.3s' }}
+  >
+    <span className="text-sm font-semibold">500+</span>
+  </div>
+</div>
+
         <div>
           <p className="font-semibold text-base text-text_color_primary">Trusted by 500+ Businesses</p>
           <p className="text-base text-text_color_secondary">4.9/5 Average Rating</p>
@@ -277,15 +307,15 @@ const Hero = () => {
       <div className="flex justify-center lg:justify-start gap-6 pt-5">
         <Link href="/contact">
           <button
-            className="text-lg lg:text-xl py-3 px-6 rounded-lg w-[140px]"
-            style={{ backgroundImage: 'linear-gradient(135deg, #FFCA28 30%, #FFB300 60%, #FFA000 100%)' }}
+            className="primary-button"
+            // style={{ backgroundImage: 'linear-gradient(135deg, #FFCA28 30%, #FFB300 60%, #FFA000 100%)' }}
           >
             Contact Us
           </button>
         </Link>
         <Link href="/service/performance-marketing">
           <button
-            className="bg-gradient-to-r from-[#c656a0] to-[#d98ab5] w-[140px] text-lg lg:text-xl py-3 px-6 rounded-lg"
+            className="primary-button-outline text-black"
           >
             Services
           </button>
@@ -294,120 +324,144 @@ const Hero = () => {
     </div>
 
     {/* Right Half - Form */}
-    <div className="flex justify-center items-center p-8">
-      <form
-        className="w-full max-w-[500px] bg-primary rounded-lg p-6 space-y-4 backdrop-blur-sm"
-        style={{
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          boxShadow: `
-            inset 0 0 4px rgba(255, 255, 255, 0.2), 
-            0 2px 8px rgba(0, 0, 0, 0.1) 
-          `,
-        }}
-        onSubmit={handleSubmit}
-      >
-        <h2 className="text-2xl font-bold text-center text-text_color_primary">
-          Tell Us How We Can Help!
-        </h2>
+    <div className="flex justify-center items-center p-8 animate-on-scroll">
+  <div className="relative w-full max-w-md glass-gradient-card">
+    <form
+      className="relative rounded-glass-card space-y-4"
+      onSubmit={handleSubmit}
+    >
+      <h2 className="text-2xl font-bold text-center text-gradient animate-gradient">
+        Tell Us How We Can Help!
+      </h2>
 
-        {/* Name Field */}
-        <div className="relative">
-          <FaUser className="absolute left-3 top-3 text-gray-400" />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
-            placeholder="Name *"
-            required
-          />
-        </div>
+      {/* Name Field */}
+      <div className="relative">
+  <Image
+    src="/assets/Images/home-page/people-form.svg"
+    alt="User Icon"
+    width={14}
+    height={14}
+    className="absolute left-3 top-3"
+  />
+  <input
+    type="text"
+    id="name"
+    name="name"
+    value={formData.name}
+    onChange={handleChange}
+    className="w-full pl-10 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
+    placeholder="Name *"
+    required
+  />
+</div>
 
-        {/* Email Field */}
-        <div className="relative">
-          <FaEnvelope className="absolute left-3 top-3 text-gray-400" />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
-            placeholder="Email *"
-            required
-          />
-        </div>
 
-        {/* Phone Field */}
-        <div className="relative">
-          <FaPhone className="absolute left-3 top-3 text-gray-400" />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
-            placeholder="Phone No. *"
-            required
-          />
-        </div>
+      {/* Email Field */}
+      <div className="relative">
+      <Image
+    src="/assets/Images/home-page/email-form.svg"
+    alt="User Icon"
+    width={15}
+    height={15}
+    className="absolute left-3 top-3.5"
+  />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
+          placeholder="Email *"
+          required
+        />
+      </div>
 
-        {/* Service Field */}
-        <div className="relative">
-          <FaList className="absolute left-3 top-3 text-gray-400" />
-          <select
-            id="service"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-gray-400 appearance-none peer"
-            required
-          >
-            <option value="" disabled hidden>Select a Service *</option>
-            <option value="seo">Lead Generation</option>
-            <option value="ppc">Paid Marketing</option>
-            <option value="social-media">Social Media Management</option>
-            <option value="web-development">Web Development</option>
-            <option value="personal-branding">UGC Content</option>
-            <option value="seo">SEO</option>
-          </select>
-        </div>
+      {/* Phone Field */}
+      <div className="relative">
+      <Image
+    src="/assets/Images/home-page/call-form.svg"
+    alt="User Icon"
+    width={15}
+    height={15}
+    className="absolute left-3 top-3"
+  />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
+          placeholder="Phone No. *"
+          required
+        />
+      </div>
 
-        {/* Message Field */}
-        <div className="relative">
-          <FaComment className="absolute left-3 top-3 text-gray-400" />
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
-            placeholder="Write your query (Optional)"
-          />
-        </div>
+      {/* Service Field */}
+      <div className="relative">
+      <Image
+    src="/assets/Images/home-page/service-form.svg"
+    alt="User Icon"
+    width={13}
+    height={13}
+    className="absolute left-3 top-3"
+  />
+        <select
+          id="service"
+          name="service"
+          value={formData.service}
+          onChange={handleChange}
+          className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-gray-400 appearance-none peer"
+          required
+        >
+          <option value="" disabled hidden>Select a Service *</option>
+          <option value="seo">Lead Generation</option>
+          <option value="ppc">Paid Marketing</option>
+          <option value="social-media">Social Media Management</option>
+          <option value="web-development">Web Development</option>
+          <option value="personal-branding">UGC Content</option>
+          <option value="seo">SEO</option>
+        </select>
+      </div>
 
-        {/* Submit Button */}
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="text-lg bg-highlight py-2 px-6 rounded-lg hover:bg-[#5acbf5] hover:text-white"
-          >
-            Submit
-          </button>
-        </div>
+      {/* Message Field */}
+      <div className="relative">
+      <Image
+    src="/assets/Images/home-page/conv-form.svg"
+    alt="User Icon"
+    width={16}
+    height={15}
+    className="absolute left-3 top-3"
+  />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-highlight bg-transparent text-text_color_secondary peer"
+          placeholder="Write your query (Optional)"
+        />
+      </div>
 
-        {/* Success Message */}
-        {formSubmitted && (
-          <p className="text-center text-lg text-text_color_secondary font-semibold">
-            Thank you for reaching out! We will get back to you shortly.
-          </p>
-        )}
-      </form>
-    </div>
+      {/* Submit Button */}
+      <div className="flex justify-center">
+        <button type="submit" className="primary-button w-full">
+          Submit
+        </button>
+      </div>
+
+      {/* Success Message */}
+      {formSubmitted && (
+        <p className="text-center text-lg text-text_color_secondary font-semibold">
+          Thank you for reaching out! We will get back to you shortly.
+        </p>
+      )}
+    </form>
+  </div>
+</div>
+
   </div>
 </div>
 

@@ -20,20 +20,17 @@ const AboutCompany = () => {
 
           {/* Content Section */}
           <div className="flex flex-col justify-center items-start w-full lg:w-[50%] text-center md:text-left space-y-3">
-            <h1 className="text-4xl lg:text-5xl font-bold">
-              Unleashing potential, delivering excellence.
-            </h1>
+          <h1 className="text-4xl lg:text-5xl font-bold">
+  Unleashing potential, delivering{" "}
+  <span className="text-gradient">excellence</span>.
+</h1>
             <p className="text-lg lg:text-xl font-normal text-text_color_secondary max-md:mx-auto">
             Meet the team responsible for today&apos;s quickest growing business.
             </p>
             <div className="flex justify-center md:justify-start pb-4 max-md:mx-auto">
               <Link href="/about">
-                <button className="text-text_color_primary bg-highlight rounded-full w-fit px-6 py-2"
-                style={{
-              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
-              cursor: 'pointer',
-            }}>
-                  MORE ABOUT US
+                <button className="text-primary bg-color_purple rounded-full w-fit px-6 py-2">
+                  More About Us
                 </button>
               </Link>
             </div>
