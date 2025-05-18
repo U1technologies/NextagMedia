@@ -2,17 +2,6 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Styles from './index.module.css';
-import {
-  Code,
-  BarChart,
-  PaintBucket,
-  Globe,
-  TrendingUp,
-  Share2,
-  CheckCircle,
-  Users,
-  User,
-} from 'lucide-react';
 
 const OurServices = () => {
   const scrollRef = useRef(null);
@@ -20,91 +9,59 @@ const OurServices = () => {
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (direction === 'left') {
-      current.scrollBy({ left: -300, behavior: 'smooth' });
+      current.scrollBy({
+        left: -300,
+        behavior: 'smooth', // This makes the scroll smooth
+      });
     } else {
-      current.scrollBy({ left: 300, behavior: 'smooth' });
+      current.scrollBy({
+        left: 300,
+        behavior: 'smooth', // This makes the scroll smooth
+      });
     }
   };
 
-  const services = [
-    {
-      title: 'Performance Marketing',
-      description:
-        'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
-      icon: BarChart,
-      link: '/service/performance-marketing',
-    },
-    {
-      title: 'Social Media Management',
-      description:
-        "Boost your brand's visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.",
-      icon: Share2,
-      link: '/service/social-media-management',
-    },
-    {
-      title: 'Web Development',
-      description:
-        'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
-      icon: Code,
-      link: '/service/web-development',
-    },
-    {
-      title: 'SEO',
-      description:
-        'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
-      icon: Globe,
-      link: '/service/seo',
-    },
-    {
-      title: 'Lead Generation',
-      description:
-        'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
-      icon: Users,
-      link: '/service/lead-generation',
-    },
-    {
-      title: 'Personal Branding',
-      description:
-        'Build a strong, authentic personal brand that sets you apart in the digital landscape. Nextagmedia helps you showcase your expertise, amplify your voice, and create a compelling online presence to inspire trust and attract opportunities.',
-      icon: User,
-      link: '/service/personal-branding',
-    },
-    {
-      title: 'UGC Content',
-      description:
-        'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
-      icon: CheckCircle,
-      link: '/service/ugc-content',
-    },
-  ];
-
   return (
     <div className="bg-secondary pb-12">
-      <section className="mx-auto flex flex-col items-center md:flex-row">
+      <section className="mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row">
         <div className="w-full text-left md:hidden mb-10">
-          <span className="w-fit rounded-full bg-color_magenta px-6 py-3 text-primary">SERVICES</span>
+          <span
+            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary"
+            style={{
+              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+              cursor: 'pointer',
+            }}
+          >
+            SERVICES
+          </span>
           <h2 className="mt-6 text-4xl font-bold">
             Your Dedicated Partner in Achieving Exceptional Digital Growth
           </h2>
         </div>
-
-        <div className="mb-8 flex justify-center md:mb-0 md:w-1/2 md:justify-start">
+        {/* Left Section: Image */}
+        <div className="mb-8 flex w-full justify-center md:mb-0 md:w-1/2 md:justify-start">
           <Image
-            src="/assets/Images/home-page/services-market.jpg"
-            width={550}
-            height={550}
+            src="/assets/Images/home-page/main-service.svg"
+            width={400}
+            height={400}
             alt="Service"
-            className="  rounded-lg"
+            className="w-full max-w-md rounded-lg"
           />
         </div>
-
-        <div className="w-full md:w-1/2 text-left">
-          <span className="w-fit rounded-full bg-color_magenta px-6 py-3 text-primary max-md:hidden">SERVICES</span>
+        {/* Right Section: Content */}
+        <div className="w-full md:w-1/2 md:pl-8 text-left">
+          <span
+            className="w-fit rounded-full bg-highlight px-6 py-3 text-text_color_primary max-md:hidden"
+            style={{
+              backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+              cursor: 'pointer',
+            }}
+          >
+            SERVICES
+          </span>
           <h2 className="mt-6 text-4xl font-bold max-md:hidden">
-            Your Dedicated Partner in Achieving{' '}
-            <span className="text-gradient">Exceptional Digital</span> Growth
+            Your Dedicated Partner in Achieving Exceptional Digital Growth
           </h2>
-
           <div className="mt-6 flex flex-col space-y-3">
             {[
               'Higher Conversion Rates',
@@ -112,9 +69,9 @@ const OurServices = () => {
               'Increase Website Traffic',
               '24/7 Promotion',
             ].map((text, idx) => (
-              <div className="flex items-center space-x-4" key={idx}>
+              <div className="flex items-center space-x-2" key={idx}>
                 <Image
-                  src="/assets/Images/home-page/icon-tick.svg"
+                  src="/assets/Images/home-page/tickk-2.svg"
                   alt="Tick Icon"
                   width={20}
                   height={20}
@@ -126,45 +83,106 @@ const OurServices = () => {
         </div>
       </section>
 
-      <div className="mx-auto max-w-[85%] pt-8 max-md:pt-0 relative">
-        <div ref={scrollRef} className={`flex space-x-8 overflow-x-scroll ${Styles.customScroll}`}>
-          {services.map(({ title, description, icon: Icon, link }, idx) => (
+      {/* Service Cards Section */}
+      <div className="mx-auto max-w-[85%] 2xl:w-[80%] pt-8 max-md:pt-0 relative">
+        <div
+          ref={scrollRef}
+          className={`flex space-x-8 overflow-x-scroll ${Styles.customScroll}`}
+        >
+          {[
+            {
+              title: 'Performance Marketing',
+              description:
+                'Reach your ideal audience with Nextagmedia’s customized paid marketing strategies. We ensure your ads connect with the right people at the right time, turning clicks into actionable leads and delivering a measurable return on investment.',
+              imgSrc: '/assets/Images/home-page/paid-marketing.svg',
+              link: '/service/performance-marketing',
+            },
+            {
+              title: 'Social Media Management',
+              description:
+                "Boost your brand's visibility with impactful social media strategies. Nextagmedia helps you create engaging content, spark meaningful interactions, and strengthen your online presence across key platforms.",
+              imgSrc: '/assets/Images/home-page/social-media.svg',
+              link: '/service/social-media-management',
+            },
+            {
+              title: 'Web Development',
+              description:
+                'Create a robust online presence with our expert web development services. We deliver user-friendly, responsive websites that reflect your brand, enhance visibility, and support sustainable growth.',
+              imgSrc: '/assets/Images/home-page/website-dev.svg',
+              link: '/service/web-development',
+            },
+            {
+              title: 'SEO',
+              description:
+                'Improve your website’s visibility with Nextagmedia’s SEO solutions. Our optimized strategies help increase search rankings, drive quality traffic, and establish credibility in competitive markets.',
+              imgSrc: '/assets/Images/home-page/SEO-hp.svg',
+              link: '/service/seo',
+            },
+            {
+              title: 'Lead Generation',
+              description:
+                'Drive targeted leads with our efficient lead generation strategies. We help you attract potential customers, build meaningful connections, and boost conversions to grow your business effectively.',
+              imgSrc: '/assets/Images/home-page/leads-gen.svg',
+              link: '/service/lead-generation',
+            },
+            {
+              title: 'Personal Branding',
+              description:
+                'Build a strong, authentic personal brand that sets you apart in the digital landscape. Nextagmedia helps you showcase your expertise, amplify your voice, and create a compelling online presence to inspire trust and attract opportunities.',
+              imgSrc: '/assets/Images/home-page/personal-branding.svg',
+              link: '/service/personal-branding',
+            },
+            {
+              title: 'UGC Content',
+              description:
+              'Leverage the power of user-generated content to build authenticity and engagement. Nextagmedia helps you curate, manage, and optimize UGC to strengthen your brand’s reputation and foster a loyal community.',
+              imgSrc: '/assets/Images/home-page/user-content.svg',
+              link: '/service/ugc-content',
+                          },
+          ].map(({ title, description, imgSrc, link }, idx) => (
             <div
               key={idx}
-              className="group flex min-w-[400px] h-[300px] mb-1 flex-col bg-primary shadow-lg max-sm:min-w-full rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="flex min-w-[380px] h-[420px] mb-1 flex-col items-center rounded-tl-[52px] rounded-br-[52px] border border-gray-200 bg-primary backdrop-blur-2xl p-6 shadow-md max-sm:min-w-full"
             >
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center 
-                  bg-gradient-to-r from-[#ba8fdb] to-[#7ed7f7] 
-                  group-hover:from-[#e050b0] group-hover:to-[#ba8fdb] 
-                  transition-all duration-300">
-                <Icon className="w-8 h-10 text-white" />
+              <div className="flex h-2/5 w-full justify-center">
+                <Image
+                  src={imgSrc}
+                  alt={title}
+                  width={400}
+                  height={400}
+                  className="h-full object-contain"
+                />
               </div>
-              <h3 className="mt-5 w-full text-left text-2xl font-semibold text-text_color_primary">
+              <h3 className="mt-8 w-full text-left text-2xl font-semibold text-text_color_primary">
                 {title}
               </h3>
               <p className="mt-2 text-lg lg:text-xl line-clamp-4 w-full text-left text-text_color_secondary">
                 {description}
               </p>
               <div className="flex flex-row w-full justify-start mt-4">
-                <Link href={link}>
-                  <button className="text-lg text-color_magenta hover:text-color_blue flex items-center gap-3">
-                    <span>Read More</span>
-                    <Image
-                      src="/assets/Images/home-page/right-arrow.svg"
-                      alt="Arrow Icon"
-                      width={16}
-                      height={16}
-                    />
-                  </button>
-                </Link>
-              </div>
+  <Link href={link}>
+    <button className="text-lg text-[#c656a0] hover:text-[#ffc700] flex items-center gap-3">
+      <span>Read More</span>
+      <Image
+        src="/assets/Images/home-page/right-arrow.svg"
+        alt="Arrow Icon"
+        width={16}
+        height={16}
+      />
+    </button>
+  </Link>
+</div>
             </div>
           ))}
         </div>
       </div>
 
+      {/* Left and Right Scroll Buttons Section */}
       <div className="mt-6 flex justify-center space-x-2">
-        <button className="z-10" onClick={() => scroll('left')}>
+        <button
+          className="z-10"
+          onClick={() => scroll('left')}
+        >
           <Image
             src="/assets/Images/home-page/leftArrow.svg"
             alt="Left Arrow"
@@ -172,7 +190,10 @@ const OurServices = () => {
             height={36}
           />
         </button>
-        <button className="z-10" onClick={() => scroll('right')}>
+        <button
+          className="z-10"
+          onClick={() => scroll('right')}
+        >
           <Image
             src="/assets/Images/home-page/rightArrow.svg"
             alt="Right Arrow"
@@ -182,9 +203,17 @@ const OurServices = () => {
         </button>
       </div>
 
+      {/* Explore All Button */}
       <div className="mt-12 text-center">
-        <Link href={'/service/performance-marketing'} className="inline-block primary-button">
-          Explore All
+        <Link
+          href={'/service/performance-marketing'}
+          className="inline-block rounded-md bg-highlight px-6 py-3 text-text_color_primary"
+          style={{
+            backgroundImage: 'linear-gradient(135deg, #FFCA28 5%, #FFB300 60%, #FFA000 100%)',
+            cursor: 'pointer',
+          }}
+        >
+          EXPLORE ALL
         </Link>
       </div>
     </div>
