@@ -9,7 +9,7 @@ export const BTN_SUBMIT = "Submit"
 
 export const HOME_PAGE = {
   OUR_PARTNERS: {
-    H2_PARTNERS: 'Trusted by top companies',
+    H2_PARTNERS: 'Trusted By Top',
     partners: [
       { image: '/assets/Images/home-page/Paytm.png', alt: 'Paytm' },
       { image: '/assets/Images/home-page/tata-aig.png', alt: 'Tata AIG' },

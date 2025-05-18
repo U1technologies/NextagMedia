@@ -9,7 +9,7 @@ const Card = ({ description }) => {
     <div className="flex flex-col w-[22rem] 2xl:w-[26rem] max-sm:mx-auto p-8 bg-primary rounded-lg shadow-md border border-gray-300">
       
       {/* Testimonial Description */}
-      <p className={`text-text_color_secondary text-base mb-12 leading-relaxed ${Styles.story}`}>
+      <p className={`text-text_color_secondary mb-12 leading-relaxed ${Styles.story}`}>
         <h3 className="text-highlight">“</h3> 
         <p className='text-lg lg:text-xl'>{description.description}</p>
         <h3 className="text-highlight">”</h3>
@@ -17,8 +17,8 @@ const Card = ({ description }) => {
 
       {/* Full-width Line with Right-Aligned Profile Image */}
       <div className="relative flex items-center mb-8">
-        <div className="w-full border-t border-gray-300"></div>
-        <div className="absolute -top-9 right-10 bg-white p-1 rounded-full border-2 border-gray-200">
+        <div className="w-full border-t border-[#edadd7]"></div>
+        <div className="absolute -top-9 right-10 bg-white p-1 rounded-full border-2 border-[#eaa4d1]">
           <Image
             src={description.profileImage}
             alt={`${description.name} Profile`}
