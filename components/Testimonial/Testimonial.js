@@ -3,7 +3,7 @@ import Card from './Card/Card';
 import Styles from './index.module.css';
 
 const Testimonial = () => {
-  const H2_OUR_CLIENT = "What Our";
+  const H2_OUR_CLIENT = "Customer Stories";
   const details = [
     {
       profileImage: "/assets/Images/home-page/rohan.jpeg",
@@ -39,16 +39,7 @@ website: "linkbux.com"
   return (
     <div className='bg-secondary'>
       <div className={`mx-[5%] md:mx-[7.5%] pt-16 pb-8`}>
-        {/* <p className='font-semibold text-2xl text-text_color_secondary text-center'>{H2_OUR_CLIENT}</p> */}
-        <div className="flex justify-center items-center font-semibold">
-      <h3 className="mr-2 text-text_color_primary">
-        {H2_OUR_CLIENT}
-      </h3>
-      <h3 className="text-gradient animate-gradient">
-        Clients Say
-      </h3>
-    </div>
-      
+        <p className='font-semibold text-2xl text-text_color_secondary text-center'>{H2_OUR_CLIENT}</p>
         <div className={`flex overflow-x-auto gap-12 ${Styles.customScroll}`}>
           {details.map((item, index) => (
             <div key={index} className="flex-shrink-0">

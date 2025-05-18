@@ -15,10 +15,7 @@ module.exports = {
         highlight: 'var(--highlight-color)',
         text_color_primary: 'var(--primary-text-color)',
         text_color_secondary: 'var(--secondary-text-color)',
-        text_color_tertiary: 'var(--tertiary-text-color)',
-        color_magenta:'var(--brand-magenta)',
-        color_blue:'var(--brand-blue)',
-        color_purple:'var(--brand-purple)',
+        text_color_tertiary: 'var(--tertiary-text-color)'
       }
     },
   },
