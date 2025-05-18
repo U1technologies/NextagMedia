@@ -120,7 +120,7 @@ const PortfolioSection = () => {
                   Coming Soon
                 </h3>
                 <p className="text-gray-500">
-                  Our next success stories are coming soon. Stay tuned!
+                   Our next success stories are coming soon. Stay tuned!
                 </p>
               </div>
             )}
