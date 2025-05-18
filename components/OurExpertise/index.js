@@ -28,16 +28,20 @@ const Achievements = () => {
     <div className="bg-primary py-3">
       <section ref={sectionRef}>
         <div className="flex flex-col items-center max-w-[1500px] m-auto text-text_color_secondary max-md:[90%] max-md:mx-auto">
-          <p className="text-2xl font-semibold mt-2">Our Achievements</p>
+        <div className="flex items-center font-semibold">
+             <h3 className="mr-2 text-text_color_primary">Our</h3> 
+                  <h3 className="text-gradient animate-gradient">Achievements</h3>
+                    </div>
+
           <div className="flex flex-wrap justify-center gap-10 max-md:gap-4 mt-10 w-full max-md:w-[85%] text-center">
 
             {/* Projects Executed */}
             <div className="flex items-center gap-4 max-md:w-[60%]">
               <Image
-                src="/assets/Images/home-page/projects.png"
+                src="/assets/Images/home-page/image-1.png"
                 alt="Projects Executed Icon"
-                width={60}
-                height={60}
+                width={55}
+                height={55}
                 className="object-contain"
               />
               <div className="text-left">
@@ -54,10 +58,10 @@ const Achievements = () => {
             {/* Team Size */}
             <div className="flex items-center gap-4 max-md:w-[60%]">
               <Image
-                src="/assets/Images/home-page/team-icon.png"
+                src="/assets/Images/home-page/image-2.png"
                 alt="Team Size Icon"
-                width={60}
-                height={60}
+                width={55}
+                height={55}
                 className="object-contain"
               />
               <div className="text-left">
@@ -74,10 +78,10 @@ const Achievements = () => {
             {/* Active Clients */}
             <div className="flex items-center gap-4 max-md:w-[60%]">
               <Image
-                src="/assets/Images/home-page/Client.png"
+                src="/assets/Images/home-page/image-3.png"
                 alt="Active Clients Icon"
-                width={60}
-                height={60}
+                width={55}
+                height={55}
                 className="object-contain"
               />
               <div className="text-left">
@@ -94,10 +98,10 @@ const Achievements = () => {
             {/* Ongoing Contracts */}
             <div className="flex items-center gap-4 max-md:w-[60%]">
               <Image
-                src="/assets/Images/home-page/contract.png"
+                src="/assets/Images/home-page/image-4.png"
                 alt="Ongoing Contracts Icon"
-                width={60}
-                height={60}
+                width={55}
+                height={55}
                 className="object-contain"
               />
               <div className="text-left">
