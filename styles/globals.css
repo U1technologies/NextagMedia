@@ -10,9 +10,9 @@ html {
   --footer-color: #F6FAFF;
   --navbar-color: #FEFEFE;
   --primary-color: #FEFEFE;
-  --secondary-color: #F5F5F5;
+  --secondary-color: #f9fafb;
   --background-color: #FEFEFE;
-  --primary-text-color: #333333;
+  --primary-text-color: #343434;
   --secondary-text-color: #6e6e6e;
   --highlight-color: #ffc700;
   --section-width: 85%;
@@ -33,6 +33,9 @@ html {
   --font-size-paragraph: 1rem;
   --font-size-title: 2rem;
   --font-size-label: 14px;  
+  --brand-magenta: #e050b0;
+  --brand-blue: #7ed7f7;
+  --brand-purple: #ba8fdb;
 }
 @media (min-width: 1440px) {
   :root {
@@ -146,24 +149,64 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 15px 0px !important;
 }
  /*buttons*/
-.primary-button {
-  color: var(--primary-text-color);
+ .primary-button {
+  color: white;
   font-size: var(--font-size-paragraph);
-  background-image: linear-gradient(135deg, #FFCA28 20%, #FFB300 60%, #FFA000 100%);
-  border-radius: 6px;
-  padding: 9px 20px;
+  background-image: linear-gradient(to right, 
+                     var(--brand-magenta), 
+                     var(--brand-purple), 
+                     var(--brand-blue));
+
+    /* linear-gradient(to right, #f7d149, #b14a8e); */
+  
+  /* linear-gradient(to right, 
+                     #5c7cfa, 
+                     #b05da5, 
+                     #f0627a); */ 
+                     
+  border-radius: 12px;
+  padding: 8px 24px;
   border: none;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .primary-button-outline {
-  color: var(--highlight-color);
+  position: relative;
+  color: var(--primary-text-color);
   font-size: var(--font-size-paragraph);
-  border: 1.5px solid var(--highlight-color);
-  border-radius: 6px;
-  padding: 8px 18px;
+  background: white;
+  border-radius: 12px;
+  padding: 8px 24px;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
+
+.primary-button-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 1.5px;
+  background: linear-gradient(to right, var(--brand-magenta), var(--brand-purple), var(--brand-blue));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.primary-button-outline span {
+  background-image: linear-gradient(to right, var(--brand-magenta), var(--brand-purple), var(--brand-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .primary-button-outline-disabled {
   color: #6e6e6e93;
   font-size: var(--font-size-paragraph);
@@ -174,6 +217,84 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   /* font-weight: 500 */
 }
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--brand-magenta), var(--brand-purple), var(--brand-blue));
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.pulse-avatar {
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(198, 86, 160, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(198, 86, 160, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(198, 86, 160, 0);
+  }
+}
+
+
+/* Custom Utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-on-scroll {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+.glass-card {
+  @apply bg-white backdrop-blur-md border shadow-lg;
+}
+
+.rounded-glass-card {
+  @apply glass-card rounded-2xl overflow-hidden shadow-xl w-full p-6;
+}
+
+.glass-gradient-card {
+  @apply relative;
+}
+
+.glass-gradient-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem; /* same as rounded-lg */
+  filter: blur(1rem); /* same as blur-xl */
+  z-index: -10;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 170, 0.1),   /* brand-magenta with 20% opacity */
+    rgba(0, 102, 255, 0.1)    /* brand-blue with 20% opacity */
+  );
+}
+
+
 /* Default styles for heading and paragraph tags using variables */
 h1 {
   font-size: var(--font-size-h1);

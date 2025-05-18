@@ -45,12 +45,13 @@ const WorkingWith = ({ data }) => {
     };
   }, [partners]);
   return (
-    <div className='py-4 bg-primary'>
-    <div className={styles.main}>
-      <div className={styles.container}>
-        <section className={styles.container}>
+    <div className='pt-2 py-4 bg-primary'>
+        <section>
           <div className={styles.wrapper}>
-            <p className='font-semibold text-2xl text-text_color_secondary'>{data?.H2_PARTNERS}</p>
+            <div className="flex items-center font-semibold">
+             <h3 className="mr-2 text-text_color_primary">{data?.H2_PARTNERS}</h3> 
+                  <h3 className="text-gradient animate-gradient">Companies</h3>
+                    </div>
             <div className={styles.partners} ref={scrollContainerRef} >
               {partners.map((partner, index) => (
                 <div
@@ -69,8 +70,6 @@ const WorkingWith = ({ data }) => {
             </div>
           </div>
         </section>
-      </div >
-    </div >
     </div>
   );
 };

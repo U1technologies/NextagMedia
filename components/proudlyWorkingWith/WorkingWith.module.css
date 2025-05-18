@@ -1,5 +1,5 @@
 .container {
-  background-color: FEFEFE;
+  background-color: #FEFEFE;
 }
 .wrapper{
   display: flex;
@@ -12,7 +12,7 @@
   overflow-x: auto;
   justify-content: space-between;
   width: 100%;
-  padding-top:40px;
+  padding-top:50px;
 }
 
 .partners > div {
@@ -68,7 +68,7 @@ background-color: var(--primary-color);
   width: 100%;
 }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .backgroundDiv{
     height:225px;
     top:40px;
@@ -76,18 +76,18 @@ background-color: var(--primary-color);
   }
   .partners{
     width: 100%;
-  }
-  }
+  } */
+  /* } */
   @media (max-width: 1024px) {
     .backgroundDiv{
       height:225px;
       top:40px;
     }
   }  
-@media (min-width:1536px){
+/* @media (min-width:1536px){
 .backgroundDiv{
   top:50px;
   height: 280px;
 }
 
-}
+} */
