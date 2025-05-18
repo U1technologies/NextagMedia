@@ -6,17 +6,23 @@ const AboutCompany = () => {
   return (
     <div className="bg-secondary py-4">
       <section>
-        <div className="relative flex flex-col md:flex-row justify-center items-center">
+        <div className="relative flex flex-col md:flex-row md:gap-12 justify-center items-center">
           {/* Image Section */}
           <div className="flex justify-center items-center w-full lg:w-[50%] order-first md:order-none">
-            <Image
-              src="/assets/Images/home-page/About us.svg"
-              alt="About Us Image"
-              height={50}
-              width={50}
-              className="w-[100%] max-w-[650px] h-auto object-cover"
-            />
-          </div>
+                      {/* <div className="flex justify-center items-center w-full lg:w-[50%]"> */}
+  <video
+    src="/assets/Images/home-page/Change1.mp4" // make sure the path is correct
+    className="rounded-lg"
+    height={800}
+    width={800}
+    controls // optional: adds play/pause UI
+    autoPlay // optional: auto-plays the video
+    loop // optional: loops the video
+    muted // optional: mutes the video on autoplay
+    playsInline // for iOS devices
+  />
+</div>
+          {/* </div> */}
 
           {/* Content Section */}
           <div className="flex flex-col justify-center items-start w-full lg:w-[50%] text-center md:text-left space-y-3">

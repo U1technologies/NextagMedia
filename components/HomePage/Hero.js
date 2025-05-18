@@ -237,7 +237,7 @@ const Hero = () => {
     }, []);
   
     return (
-        <section className="relative w-full  overflow-hidden">
+        <section className="relative w-[96%] overflow-hidden">
           {/* Overlay Div with Particles */}
           <div
             id="particles-js"
